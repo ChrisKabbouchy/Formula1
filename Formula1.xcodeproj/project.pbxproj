@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E084FBF2565786200587865 /* RacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E084FBE2565786200587865 /* RacesCell.swift */; };
 		4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB225617D3900A08F0D /* AppDelegate.swift */; };
 		4E7B2CB525617D3900A08F0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB425617D3900A08F0D /* SceneDelegate.swift */; };
 		4E7B2CB725617D3900A08F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB625617D3900A08F0D /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E084FBE2565786200587865 /* RacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesCell.swift; sourceTree = "<group>"; };
 		4E7B2CAF25617D3900A08F0D /* Formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7B2CB225617D3900A08F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E7B2CB425617D3900A08F0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E084FC32565787800587865 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E084FC42565788400587865 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E7B2CB825617D3900A08F0D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E084FC52565788E00587865 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E7B2CB625617D3900A08F0D /* ViewController.swift */,
+				4E7B2CF525618DD800A08F0D /* StandingViewController.swift */,
+				4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */,
+				4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */,
+				4E084FBE2565786200587865 /* RacesCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		4E7B2CA625617D3900A08F0D = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +136,9 @@
 			children = (
 				4E7B2CB225617D3900A08F0D /* AppDelegate.swift */,
 				4E7B2CB425617D3900A08F0D /* SceneDelegate.swift */,
-				4E7B2CB625617D3900A08F0D /* ViewController.swift */,
-				4E7B2CF525618DD800A08F0D /* StandingViewController.swift */,
-				4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */,
-				4E7B2CB825617D3900A08F0D /* Main.storyboard */,
-				4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */,
+				4E084FC52565788E00587865 /* Controller */,
+				4E084FC42565788400587865 /* View */,
+				4E084FC32565787800587865 /* Model */,
 				4E7B2CBB25617D3C00A08F0D /* Assets.xcassets */,
 				4E7B2CBD25617D3C00A08F0D /* LaunchScreen.storyboard */,
 				4E7B2CC025617D3C00A08F0D /* Info.plist */,
@@ -269,6 +296,7 @@
 			files = (
 				4E7B2CB725617D3900A08F0D /* ViewController.swift in Sources */,
 				4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */,
+				4E084FBF2565786200587865 /* RacesCell.swift in Sources */,
 				4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */,
 				4E7B2D002561ACCE00A08F0D /* DriverCell.swift in Sources */,
 				4E7B2CB525617D3900A08F0D /* SceneDelegate.swift in Sources */,
@@ -449,6 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AN57ZM557L;
 				INFOPLIST_FILE = Formula1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,6 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AN57ZM557L;
 				INFOPLIST_FILE = Formula1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

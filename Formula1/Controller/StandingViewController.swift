@@ -7,12 +7,12 @@
 
 import UIKit
 
-class StandingViewController: UIViewController ,UITableViewDelegate{
+class StandingViewController: UIViewController {
 
-    @IBOutlet var UITableView: UITableView!
+    @IBOutlet var DriverTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITableView.dataSource = self
+        DriverTableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
