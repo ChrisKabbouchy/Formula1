@@ -15,6 +15,7 @@ class StandingViewController: UIViewController {
         DriverTableView.dataSource = self
         let standingsManager = FormulaManger()
         standingsManager.fetchStandingsData()
+        standingsManager.fetchConstructorData()
         print("hello")
 
         // Do any additional setup after loading the view.
