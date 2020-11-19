@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4E084FBF2565786200587865 /* RacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E084FBE2565786200587865 /* RacesCell.swift */; };
+		4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB6A2566863700FDAC4B /* FormulaManager.swift */; };
+		4E77CB70256688E800FDAC4B /* DriversStandingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB6F256688E800FDAC4B /* DriversStandingsModel.swift */; };
+		4E77CB752566892100FDAC4B /* DriversStandingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB742566892100FDAC4B /* DriversStandingsData.swift */; };
 		4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB225617D3900A08F0D /* AppDelegate.swift */; };
 		4E7B2CB525617D3900A08F0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB425617D3900A08F0D /* SceneDelegate.swift */; };
 		4E7B2CB725617D3900A08F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB625617D3900A08F0D /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		4E084FBE2565786200587865 /* RacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesCell.swift; sourceTree = "<group>"; };
+		4E77CB6A2566863700FDAC4B /* FormulaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaManager.swift; sourceTree = "<group>"; };
+		4E77CB6F256688E800FDAC4B /* DriversStandingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversStandingsModel.swift; sourceTree = "<group>"; };
+		4E77CB742566892100FDAC4B /* DriversStandingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversStandingsData.swift; sourceTree = "<group>"; };
 		4E7B2CAF25617D3900A08F0D /* Formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7B2CB225617D3900A08F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E7B2CB425617D3900A08F0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 		4E084FC32565787800587865 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E77CB6A2566863700FDAC4B /* FormulaManager.swift */,
+				4E77CB6F256688E800FDAC4B /* DriversStandingsModel.swift */,
+				4E77CB742566892100FDAC4B /* DriversStandingsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,12 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */,
 				4E7B2CB725617D3900A08F0D /* ViewController.swift in Sources */,
 				4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */,
 				4E084FBF2565786200587865 /* RacesCell.swift in Sources */,
 				4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */,
+				4E77CB752566892100FDAC4B /* DriversStandingsData.swift in Sources */,
 				4E7B2D002561ACCE00A08F0D /* DriverCell.swift in Sources */,
 				4E7B2CB525617D3900A08F0D /* SceneDelegate.swift in Sources */,
+				4E77CB70256688E800FDAC4B /* DriversStandingsModel.swift in Sources */,
 				4E7B2CFB25618ED700A08F0D /* RacesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

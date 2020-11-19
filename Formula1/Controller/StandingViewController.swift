@@ -13,6 +13,9 @@ class StandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DriverTableView.dataSource = self
+        let standingsManager = FormulaManger()
+        standingsManager.fetchStandingsData()
+        print("hello")
 
         // Do any additional setup after loading the view.
     }
