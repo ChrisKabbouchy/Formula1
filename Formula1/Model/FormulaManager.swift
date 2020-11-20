@@ -7,11 +7,18 @@
 
 import Foundation
 
+protocol FormulaMangerDelegate {
+    func driversDataDidLoad(Drivers : DriversStandingsModel)
+    func constructorDataDidLoad(Constructors: ConstructorStandingsModel)
+    func errorOccurred(error:Error)
+}
 struct FormulaManger {
     
     let driversUrl = "https://ergast.com/api/f1/current/driverStandings.json"
     let constructorsUrl = "https://ergast.com/api/f1/current/constructorStandings.json"
+    var delegate : FormulaMangerDelegate?
     
+    //MARK: -Drivers data function
     func fetchStandingsData()  {
         
         if let url = URL(string: driversUrl){
@@ -34,7 +41,7 @@ struct FormulaManger {
                             standingsList.append(driversList)
                         }
                         let driverModel = DriversStandingsModel(season: decodedData.MRData.StandingsTable.StandingsLists[0].season, round: decodedData.MRData.StandingsTable.StandingsLists[0].round, driversInfoList: standingsList)
-                        print(driverModel)
+                        delegate?.driversDataDidLoad(Drivers: driverModel)
                     } catch  {
                         print(error)
                     }
@@ -45,7 +52,7 @@ struct FormulaManger {
             
         }
     }
-    
+    //MARK: -Constructor data function
     func fetchConstructorData() {
         if let url = URL(string: constructorsUrl){
             let session = URLSession(configuration: .default)
