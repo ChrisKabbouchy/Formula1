@@ -10,28 +10,46 @@ import UIKit
 class RacesViewController: UIViewController {
 
     @IBOutlet var RacesTableView: UITableView!
+    
+    var racesModel : RaceScheduleModel?
+    
     override func viewDidLoad() {
         RacesTableView.dataSource = self
         super.viewDidLoad()
+        var formulaManager = FormulaManger()
+        formulaManager.delegate = self
+        formulaManager.fetchRacesData()
 
         // Do any additional setup after loading the view.
     }
 
 }
-extension RacesViewController : UITableViewDataSource {
+
+//MARK: -Table view
+extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return racesModel?.racesInfoList.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "RacesCell", for: indexPath) as! RacesCell
-        cell.countryLabel.text = "italy"
-        cell.dateLabel.text = "15-12-2020"
-        cell.raceName.text = "Monza grand prix 2020"
-        cell.roundLabel.text = "round 17"
+        let raceItem = racesModel?.racesInfoList[indexPath.row]
+        cell.countryLabel.text = raceItem?.country
+        cell.dateLabel.text = raceItem?.date
+        cell.raceName.text = raceItem?.raceName
+        cell.roundLabel.text = raceItem?.round
         cell.racesImage.image = UIImage(systemName: "gamecontroller")
         
         return cell
     }
-    
+    //MARK: -Formula delegate func
+    func racesScheduleDataDidLoad(Races: RaceScheduleModel) {
+        racesModel = Races
+        DispatchQueue.main.async {
+            self.RacesTableView.reloadData()
+        }
+    }
+    func errorOccurred(error: Error) {
+    }
     
 }

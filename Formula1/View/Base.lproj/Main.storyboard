@@ -11,7 +11,7 @@
         <!--Races-->
         <scene sceneID="28v-cX-eWp">
             <objects>
-                <viewController storyboardIdentifier="StandingsViewController" id="agZ-41-Sax" customClass="RacesViewController" customModule="Formula1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StandingsViewController" id="agZ-41-Sax" customClass="RacesViewController" customModule="Formula1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owA-V0-lOc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +136,7 @@
         <!--Standing-->
         <scene sceneID="vvC-HW-Ds7">
             <objects>
-                <viewController storyboardIdentifier="RacesViewController" id="A8y-t1-SLg" customClass="StandingViewController" customModule="Formula1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RacesViewController" id="A8y-t1-SLg" customClass="StandingViewController" customModule="Formula1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ejO-PF-mvT" customClass="races">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieo-Hc-haQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531.8840579710145" y="-302.00892857142856"/>
+            <point key="canvasLocation" x="620" y="-252"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="izC-Zy-n7L">

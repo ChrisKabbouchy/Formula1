@@ -70,6 +70,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         
         return cell
     }
+    //MARK: -Formula delegate func
     
     func driversDataDidLoad(Drivers: DriversStandingsModel) {
         driverModel = Drivers
@@ -78,14 +79,12 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         }
         
     }
-    
     func constructorDataDidLoad(Constructors: ConstructorStandingsModel) {
         constructorModel = Constructors
         DispatchQueue.main.async {
             self.DriverTableView.reloadData()
         }
     }
-    
     func errorOccurred(error: Error) {
         
     }
