@@ -74,7 +74,7 @@ struct FormulaManger {
                             standingsList.append(constructorList)
                         }
                         let constructorModel = ConstructorStandingsModel(season: decodedData.MRData.StandingsTable.StandingsLists[0].season, round: decodedData.MRData.StandingsTable.StandingsLists[0].round, constructorsInfoList: standingsList)
-                        print(constructorModel)
+                        delegate?.constructorDataDidLoad(Constructors: constructorModel)
                     } catch  {
                         print(error)
                     }

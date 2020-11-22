@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KaT-Ek-peT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DriverCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverCell" rowHeight="87" id="W2G-xg-WHo" customClass="DriverCell" customModule="Formula1" customModuleProvider="target">
@@ -192,19 +192,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TC1-Gw-N5y">
+                                <rect key="frame" x="75" y="60" width="266" height="42"/>
+                                <segments>
+                                    <segment title="Drivers"/>
+                                    <segment title="Constructors"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="A8y-t1-SLg" eventType="valueChanged" id="Tco-bW-JNG"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sFS-uh-hX8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KaT-Ek-peT" firstAttribute="trailing" secondItem="sFS-uh-hX8" secondAttribute="trailing" id="2Zd-fT-QBF"/>
                             <constraint firstItem="KaT-Ek-peT" firstAttribute="leading" secondItem="sFS-uh-hX8" secondAttribute="leading" id="7l7-6U-w8s"/>
-                            <constraint firstItem="KaT-Ek-peT" firstAttribute="top" secondItem="sFS-uh-hX8" secondAttribute="top" id="ud8-IH-SFd"/>
+                            <constraint firstItem="KaT-Ek-peT" firstAttribute="top" secondItem="TC1-Gw-N5y" secondAttribute="bottom" constant="16" id="GI0-YR-Zlr" userLabel="Driver Table View.top = First, Second.bottom + 16"/>
+                            <constraint firstItem="TC1-Gw-N5y" firstAttribute="leading" secondItem="sFS-uh-hX8" secondAttribute="leading" constant="75" id="K5d-8i-Uzv"/>
+                            <constraint firstItem="TC1-Gw-N5y" firstAttribute="top" secondItem="sFS-uh-hX8" secondAttribute="top" constant="16" id="dwI-bC-933"/>
+                            <constraint firstItem="sFS-uh-hX8" firstAttribute="trailing" secondItem="TC1-Gw-N5y" secondAttribute="trailing" constant="73" id="r0T-07-IKa"/>
+                            <constraint firstItem="KaT-Ek-peT" firstAttribute="top" secondItem="sFS-uh-hX8" secondAttribute="top" constant="73" id="ud8-IH-SFd"/>
                             <constraint firstItem="KaT-Ek-peT" firstAttribute="bottom" secondItem="sFS-uh-hX8" secondAttribute="bottom" id="wEB-vl-89T"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Standing" image="textformat.123" catalog="system" id="oNu-5m-ubz"/>
                     <connections>
                         <outlet property="DriverTableView" destination="KaT-Ek-peT" id="2oE-bA-QJp"/>
+                        <outlet property="segmentedControl" destination="TC1-Gw-N5y" id="Vh0-aZ-N7c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieo-Hc-haQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
