@@ -159,7 +159,7 @@
                                                         <constraint firstAttribute="height" constant="45" id="nCe-yZ-O9t"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtQ-tR-YbK">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtQ-tR-YbK" userLabel="TeamColor">
                                                     <rect key="frame" x="75" y="21" width="5" height="45"/>
                                                     <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                     <constraints>
@@ -188,6 +188,7 @@
                                         <connections>
                                             <outlet property="constructorImage" destination="rQD-mw-tRJ" id="Rkb-Jd-dym"/>
                                             <outlet property="driverName" destination="ubh-k1-0p4" id="G2G-6i-yoK"/>
+                                            <outlet property="teamColor" destination="ZtQ-tR-YbK" id="KKd-9T-lDC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -224,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieo-Hc-haQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="-252"/>
+            <point key="canvasLocation" x="618.84057971014499" y="-252.45535714285714"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="izC-Zy-n7L">

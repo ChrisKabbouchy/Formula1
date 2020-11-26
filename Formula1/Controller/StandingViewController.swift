@@ -61,9 +61,11 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "DriverCell", for: indexPath) as! DriverCell
         cell.constructorImage.image = UIImage(systemName: "gamecontroller")
         switch segmentChoice {
-        case 0:
-            cell.driverName.text = "\(driverModel?.driversInfoList[indexPath.row].driverName ?? "") \(driverModel?.driversInfoList[indexPath.row].driverLastName ?? "") "
+        case 0: cell.driverName.text =
+            "\(driverModel?.driversInfoList[indexPath.row].driverName ?? "") \(driverModel?.driversInfoList[indexPath.row].driverLastName ?? "") "
+           cell.teamColor.backgroundColor = UIColor(named:(driverModel?.driversInfoList[indexPath.row].constructor) ?? "")
         case 1 : cell.driverName.text = constructorModel?.constructorsInfoList[indexPath.row].constructorName
+            cell.teamColor.backgroundColor = UIColor(named: (constructorModel?.constructorsInfoList[indexPath.row].constructorName)!)
         default:
             break
         }

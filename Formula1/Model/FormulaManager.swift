@@ -53,8 +53,8 @@ struct FormulaManger {
                                 driverNumber: driverIndex[i].Driver.permanentNumber,
                                 nationality: driverIndex[i].Driver.nationality,
                                 dateOfBirth: driverIndex[i].Driver.dateOfBirth,
-                                constructor: driverIndex[i].Constructors[0].nationality)
-                            
+                                constructor: driverIndex[i].Constructors[0].name)
+                            print(driversList)
                             standingsList.append(driversList)
                         }
                         let driverModel = DriversStandingsModel(

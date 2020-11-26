@@ -10,6 +10,7 @@ import UIKit
 class DriverCell: UITableViewCell {
 
     @IBOutlet var constructorImage: UIImageView!
+    @IBOutlet var teamColor: UIView!
     @IBOutlet var driverName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +21,7 @@ class DriverCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
     }
-
+    
 }

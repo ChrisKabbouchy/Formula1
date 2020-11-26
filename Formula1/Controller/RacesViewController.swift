@@ -38,7 +38,8 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
         cell.dateLabel.text = raceItem?.date
         cell.raceName.text = raceItem?.raceName
         cell.roundLabel.text = raceItem?.round
-        cell.racesImage.image = UIImage(systemName: "gamecontroller")
+        cell.racesImage.image = UIImage(named: raceItem?.circuitName ?? "Yas Marina Circuit")
+        cell.racesImage.backgroundColor = UIColor.black
         
         return cell
     }
