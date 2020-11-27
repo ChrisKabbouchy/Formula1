@@ -9,9 +9,11 @@ import UIKit
 
 class DriverCell: UITableViewCell {
 
-    @IBOutlet var constructorImage: UIImageView!
+    @IBOutlet var standingsLeftImage: UIImageView!
     @IBOutlet var teamColor: UIView!
     @IBOutlet var driverName: UILabel!
+    @IBOutlet var carImage: UIImageView!
+    @IBOutlet var driverImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

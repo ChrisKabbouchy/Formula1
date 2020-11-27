@@ -8,7 +8,7 @@
 import UIKit
 
 class RacesViewController: UIViewController {
-
+    
     @IBOutlet var RacesTableView: UITableView!
     
     var racesModel : RaceScheduleModel?
@@ -19,15 +19,15 @@ class RacesViewController: UIViewController {
         var formulaManager = FormulaManger()
         formulaManager.delegate = self
         formulaManager.fetchRacesData()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
 }
 
 //MARK: -Table view
 extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return racesModel?.racesInfoList.count ?? 0
     }
@@ -51,6 +51,15 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
         }
     }
     func errorOccurred(error: Error) {
+        let alertController = UIAlertController(
+            title: "Error Occured",
+            message:error.localizedDescription,
+            preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
 }

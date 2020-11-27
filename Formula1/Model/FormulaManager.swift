@@ -35,6 +35,7 @@ struct FormulaManger {
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil{
                     print("error in task")
+                    delegate?.errorOccurred(error: error!)
                     return
                 }
                 if let safeData = data{
@@ -83,6 +84,7 @@ struct FormulaManger {
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil{
                     print("error in task")
+                    delegate?.errorOccurred(error: error!)
                     return
                 }
                 if let safeData = data{
@@ -127,6 +129,7 @@ struct FormulaManger {
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil{
                     print("error in task")
+                    delegate?.errorOccurred(error: error!)
                     return
                 }
                 if let safeData = data{

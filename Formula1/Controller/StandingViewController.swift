@@ -59,13 +59,30 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DriverCell", for: indexPath) as! DriverCell
-        cell.constructorImage.image = UIImage(systemName: "gamecontroller")
+        
         switch segmentChoice {
-        case 0: cell.driverName.text =
-            "\(driverModel?.driversInfoList[indexPath.row].driverName ?? "") \(driverModel?.driversInfoList[indexPath.row].driverLastName ?? "") "
-           cell.teamColor.backgroundColor = UIColor(named:(driverModel?.driversInfoList[indexPath.row].constructor) ?? "")
-        case 1 : cell.driverName.text = constructorModel?.constructorsInfoList[indexPath.row].constructorName
-            cell.teamColor.backgroundColor = UIColor(named: (constructorModel?.constructorsInfoList[indexPath.row].constructorName)!)
+        case 0://user selected drivers standings
+            let driverItem = driverModel?.driversInfoList[indexPath.row]
+            cell.driverName.text = "\(driverItem?.driverName ?? "") \(driverItem?.driverLastName ?? "") "
+            cell.teamColor.backgroundColor = UIColor(named:(driverItem?.constructor) ?? "AlphaTauri")
+            cell.teamColor.layer.borderWidth = 0.25
+            cell.teamColor.layer.borderColor = UIColor.black.cgColor
+            cell.standingsLeftImage.image = UIImage(named: driverItem?.nationality ?? "Mercedes")
+            cell.carImage.isHidden = true
+            cell.driverImage.isHidden = false
+            cell.driverImage.image = UIImage(named: driverItem?.driverLastName ?? "Hamilton")
+            
+        case 1 :// user selected constructor standings
+            let constructorItem = constructorModel?.constructorsInfoList[indexPath.row]
+            cell.driverName.text = constructorItem?.constructorName
+            cell.teamColor.backgroundColor = UIColor(named: (constructorItem?.constructorName) ?? "AlphaTauri")
+            cell.teamColor.layer.borderWidth = 0.25
+            cell.teamColor.layer.borderColor = UIColor.black.cgColor
+            cell.standingsLeftImage.image = UIImage(named: constructorItem?.constructorName ?? "Mercedes")
+            cell.driverImage.isHidden = true
+            cell.carImage.isHidden = false
+            cell.carImage.image = UIImage(named: "\(constructorItem?.constructorName ?? "Mercedes")-car")
+            
         default:
             break
         }
@@ -88,7 +105,16 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         }
     }
     func errorOccurred(error: Error) {
+        let alertController = UIAlertController(
+            title: "Error Occured",
+            message:error.localizedDescription,
+            preferredStyle: .alert)
         
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+            
     }
     
     

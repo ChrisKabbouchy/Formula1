@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -145,49 +146,71 @@
                                 <rect key="frame" x="0.0" y="117" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DriverCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverCell" rowHeight="87" id="W2G-xg-WHo" customClass="DriverCell" customModule="Formula1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="87"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DriverCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverCell" rowHeight="100.5" id="W2G-xg-WHo" customClass="DriverCell" customModule="Formula1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W2G-xg-WHo" id="N9n-a0-Brg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rQD-mw-tRJ">
-                                                    <rect key="frame" x="20" y="22" width="45" height="42.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rQD-mw-tRJ">
+                                                    <rect key="frame" x="20" y="29" width="45" height="42.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="hvR-lb-j5c"/>
                                                         <constraint firstAttribute="height" constant="45" id="nCe-yZ-O9t"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtQ-tR-YbK" userLabel="TeamColor">
-                                                    <rect key="frame" x="75" y="21" width="5" height="45"/>
+                                                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtQ-tR-YbK" userLabel="TeamColor">
+                                                    <rect key="frame" x="75" y="21" width="5" height="58.5"/>
                                                     <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="5" id="BTm-jB-oJg"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-k1-0p4">
-                                                    <rect key="frame" x="90" y="31" width="264" height="25"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="90" y="31" width="264" height="38.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9C-Bt-Nu1">
+                                                    <rect key="frame" x="294" y="0.0" width="120" height="100.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="4YL-03-3rZ"/>
+                                                        <constraint firstAttribute="width" constant="120" id="Gt8-7b-uIW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-bO-4sa">
+                                                    <rect key="frame" x="224" y="0.0" width="180" height="100.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="m42-lk-B6c"/>
+                                                        <constraint firstAttribute="width" constant="180" id="nwP-5k-C5F"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rQD-mw-tRJ" firstAttribute="centerY" secondItem="N9n-a0-Brg" secondAttribute="centerY" id="4Qu-SH-M7G"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ZtQ-tR-YbK" secondAttribute="bottom" constant="10" id="7TR-Gl-yze"/>
+                                                <constraint firstAttribute="bottom" secondItem="p9C-Bt-Nu1" secondAttribute="bottom" id="9fK-BO-jhq"/>
                                                 <constraint firstItem="rQD-mw-tRJ" firstAttribute="leading" secondItem="N9n-a0-Brg" secondAttribute="leadingMargin" id="Akf-G8-oSQ"/>
                                                 <constraint firstItem="ubh-k1-0p4" firstAttribute="top" secondItem="N9n-a0-Brg" secondAttribute="topMargin" constant="20" id="DSb-pT-aIQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="ubh-k1-0p4" secondAttribute="trailing" constant="60" id="SBy-1d-wEW"/>
+                                                <constraint firstAttribute="bottom" secondItem="bTJ-bO-4sa" secondAttribute="bottom" id="UqL-aU-7f2"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ubh-k1-0p4" secondAttribute="bottom" constant="20" id="Xms-yM-av3"/>
+                                                <constraint firstItem="p9C-Bt-Nu1" firstAttribute="top" secondItem="N9n-a0-Brg" secondAttribute="top" id="YB9-Ko-tpQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="p9C-Bt-Nu1" secondAttribute="trailing" id="YeK-DJ-pyt"/>
+                                                <constraint firstAttribute="trailing" secondItem="bTJ-bO-4sa" secondAttribute="trailing" constant="10" id="ce7-kM-0m0"/>
                                                 <constraint firstItem="ZtQ-tR-YbK" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rQD-mw-tRJ" secondAttribute="trailing" constant="10" id="m58-Tu-CTs"/>
                                                 <constraint firstItem="ubh-k1-0p4" firstAttribute="leading" secondItem="ZtQ-tR-YbK" secondAttribute="trailing" constant="10" id="mwf-kL-Maq"/>
                                                 <constraint firstItem="ZtQ-tR-YbK" firstAttribute="top" secondItem="N9n-a0-Brg" secondAttribute="topMargin" constant="10" id="oYN-9u-jNV"/>
+                                                <constraint firstItem="bTJ-bO-4sa" firstAttribute="top" secondItem="N9n-a0-Brg" secondAttribute="top" id="spj-jL-SAc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="constructorImage" destination="rQD-mw-tRJ" id="Rkb-Jd-dym"/>
+                                            <outlet property="carImage" destination="bTJ-bO-4sa" id="eiT-6o-uF7"/>
+                                            <outlet property="driverImage" destination="p9C-Bt-Nu1" id="yyG-W6-XiE"/>
                                             <outlet property="driverName" destination="ubh-k1-0p4" id="G2G-6i-yoK"/>
+                                            <outlet property="standingsLeftImage" destination="rQD-mw-tRJ" id="Rkb-Jd-dym"/>
                                             <outlet property="teamColor" destination="ZtQ-tR-YbK" id="KKd-9T-lDC"/>
                                         </connections>
                                     </tableViewCell>
@@ -195,10 +218,13 @@
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TC1-Gw-N5y">
                                 <rect key="frame" x="75" y="60" width="266" height="42"/>
+                                <color key="backgroundColor" name="Ferrari"/>
                                 <segments>
                                     <segment title="Drivers"/>
                                     <segment title="Constructors"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="segmentedControlChanged:" destination="A8y-t1-SLg" eventType="valueChanged" id="Tco-bW-JNG"/>
                                 </connections>
@@ -234,7 +260,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YYk-xg-yE8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Ferrari"/>
+                        <color key="tintColor" name="Ferrari"/>
+                        <color key="barTintColor" name="Ferrari"/>
+                        <color key="selectedImageTintColor" name="AlphaTauri"/>
                     </tabBar>
                     <connections>
                         <segue destination="A8y-t1-SLg" kind="relationship" relationship="viewControllers" id="Z92-5i-p0P"/>
@@ -246,10 +275,17 @@
             <point key="canvasLocation" x="-357" y="125"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="Ferrari"/>
     <resources>
         <image name="car.2" catalog="system" width="128" height="72"/>
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="textformat.123" catalog="system" width="128" height="62"/>
+        <namedColor name="AlphaTauri">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ferrari">
+            <color red="0.86299997568130493" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
