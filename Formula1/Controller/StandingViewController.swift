@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StandingViewController: UIViewController {
+class StandingViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var DriverTableView: UITableView!
@@ -19,6 +19,7 @@ class StandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DriverTableView.dataSource = self
+        DriverTableView.delegate = self
         var formulaManager = FormulaManger()
         formulaManager.delegate = self
         formulaManager.fetchStandingsData()
@@ -59,7 +60,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DriverCell", for: indexPath) as! DriverCell
-        
+        //cell.layer.borderWidth = 2
         switch segmentChoice {
         case 0://user selected drivers standings
             let driverItem = driverModel?.driversInfoList[indexPath.row]
@@ -71,6 +72,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
             cell.carImage.isHidden = true
             cell.driverImage.isHidden = false
             cell.driverImage.image = UIImage(named: driverItem?.driverLastName ?? "Hamilton")
+            cell.contentView.layer.borderColor = UIColor(named:(driverItem?.constructor) ?? "AlphaTauri")?.cgColor
             
         case 1 :// user selected constructor standings
             let constructorItem = constructorModel?.constructorsInfoList[indexPath.row]
@@ -82,13 +84,24 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
             cell.driverImage.isHidden = true
             cell.carImage.isHidden = false
             cell.carImage.image = UIImage(named: "\(constructorItem?.constructorName ?? "Mercedes")-car")
+           // cell.layer.borderWidth = 2
+            cell.contentView.layer.borderColor = UIColor(named: (constructorItem?.constructorName) ?? "AlphaTauri")?.cgColor
             
         default:
             break
         }
-        
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToDriverDetails", sender: self)
+        print(indexPath)
+
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        <#code#>
+//    }
+    
     //MARK: -Formula delegate func
     
     func driversDataDidLoad(Drivers: DriversStandingsModel) {

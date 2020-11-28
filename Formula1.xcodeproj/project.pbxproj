@@ -10,6 +10,7 @@
 		4E084FBF2565786200587865 /* RacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E084FBE2565786200587865 /* RacesCell.swift */; };
 		4E5AC851256ACA0900A2C86C /* RaceScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */; };
 		4E5AC856256ACA2D00A2C86C /* RaceScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */; };
+		4E7534232572C188007F86F2 /* Formula1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7534222572C188007F86F2 /* Formula1-Regular.ttf */; };
 		4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB6A2566863700FDAC4B /* FormulaManager.swift */; };
 		4E77CB70256688E800FDAC4B /* DriversStandingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB6F256688E800FDAC4B /* DriversStandingsModel.swift */; };
 		4E77CB752566892100FDAC4B /* DriversStandingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB742566892100FDAC4B /* DriversStandingsData.swift */; };
@@ -17,7 +18,7 @@
 		4E77CB852566B59700FDAC4B /* ConstructorStandingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB842566B59700FDAC4B /* ConstructorStandingsModel.swift */; };
 		4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB225617D3900A08F0D /* AppDelegate.swift */; };
 		4E7B2CB525617D3900A08F0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB425617D3900A08F0D /* SceneDelegate.swift */; };
-		4E7B2CB725617D3900A08F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB625617D3900A08F0D /* ViewController.swift */; };
+		4E7B2CB725617D3900A08F0D /* DriverDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */; };
 		4E7B2CBA25617D3900A08F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7B2CB825617D3900A08F0D /* Main.storyboard */; };
 		4E7B2CBC25617D3C00A08F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7B2CBB25617D3C00A08F0D /* Assets.xcassets */; };
 		4E7B2CBF25617D3C00A08F0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7B2CBD25617D3C00A08F0D /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 		4E084FBE2565786200587865 /* RacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesCell.swift; sourceTree = "<group>"; };
 		4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleData.swift; sourceTree = "<group>"; };
 		4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleModel.swift; sourceTree = "<group>"; };
+		4E7534222572C188007F86F2 /* Formula1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Regular.ttf"; sourceTree = "<group>"; };
 		4E77CB6A2566863700FDAC4B /* FormulaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaManager.swift; sourceTree = "<group>"; };
 		4E77CB6F256688E800FDAC4B /* DriversStandingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversStandingsModel.swift; sourceTree = "<group>"; };
 		4E77CB742566892100FDAC4B /* DriversStandingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversStandingsData.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		4E7B2CAF25617D3900A08F0D /* Formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7B2CB225617D3900A08F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E7B2CB425617D3900A08F0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E7B2CB625617D3900A08F0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsViewController.swift; sourceTree = "<group>"; };
 		4E7B2CB925617D3900A08F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E7B2CBB25617D3C00A08F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E7B2CBE25617D3C00A08F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,13 +125,21 @@
 		4E084FC52565788E00587865 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4E7B2CB625617D3900A08F0D /* ViewController.swift */,
+				4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */,
 				4E7B2CF525618DD800A08F0D /* StandingViewController.swift */,
 				4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */,
 				4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */,
 				4E084FBE2565786200587865 /* RacesCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E7534272572C22A007F86F2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4E7534222572C188007F86F2 /* Formula1-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		4E7B2CA625617D3900A08F0D = {
@@ -160,6 +170,7 @@
 				4E084FC52565788E00587865 /* Controller */,
 				4E084FC42565788400587865 /* View */,
 				4E084FC32565787800587865 /* Model */,
+				4E7534272572C22A007F86F2 /* Font */,
 				4E7B2CBB25617D3C00A08F0D /* Assets.xcassets */,
 				4E7B2CBD25617D3C00A08F0D /* LaunchScreen.storyboard */,
 				4E7B2CC025617D3C00A08F0D /* Info.plist */,
@@ -290,6 +301,7 @@
 			files = (
 				4E7B2CBF25617D3C00A08F0D /* LaunchScreen.storyboard in Resources */,
 				4E7B2CBC25617D3C00A08F0D /* Assets.xcassets in Resources */,
+				4E7534232572C188007F86F2 /* Formula1-Regular.ttf in Resources */,
 				4E7B2CBA25617D3900A08F0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */,
-				4E7B2CB725617D3900A08F0D /* ViewController.swift in Sources */,
+				4E7B2CB725617D3900A08F0D /* DriverDetailsViewController.swift in Sources */,
 				4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */,
 				4E084FBF2565786200587865 /* RacesCell.swift in Sources */,
 				4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */,
