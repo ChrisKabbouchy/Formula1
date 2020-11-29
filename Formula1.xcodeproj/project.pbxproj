@@ -10,6 +10,7 @@
 		4E084FBF2565786200587865 /* RacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E084FBE2565786200587865 /* RacesCell.swift */; };
 		4E5AC851256ACA0900A2C86C /* RaceScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */; };
 		4E5AC856256ACA2D00A2C86C /* RaceScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */; };
+		4E66CEC125741B4C00ABF908 /* RaceResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */; };
 		4E7534232572C188007F86F2 /* Formula1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7534222572C188007F86F2 /* Formula1-Regular.ttf */; };
 		4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB6A2566863700FDAC4B /* FormulaManager.swift */; };
 		4E77CB70256688E800FDAC4B /* DriversStandingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77CB6F256688E800FDAC4B /* DriversStandingsModel.swift */; };
@@ -50,6 +51,7 @@
 		4E084FBE2565786200587865 /* RacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesCell.swift; sourceTree = "<group>"; };
 		4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleData.swift; sourceTree = "<group>"; };
 		4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleModel.swift; sourceTree = "<group>"; };
+		4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultViewController.swift; sourceTree = "<group>"; };
 		4E7534222572C188007F86F2 /* Formula1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Regular.ttf"; sourceTree = "<group>"; };
 		4E77CB6A2566863700FDAC4B /* FormulaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaManager.swift; sourceTree = "<group>"; };
 		4E77CB6F256688E800FDAC4B /* DriversStandingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversStandingsModel.swift; sourceTree = "<group>"; };
@@ -125,9 +127,10 @@
 		4E084FC52565788E00587865 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */,
 				4E7B2CF525618DD800A08F0D /* StandingViewController.swift */,
 				4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */,
+				4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */,
+				4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */,
 				4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */,
 				4E084FBE2565786200587865 /* RacesCell.swift */,
 			);
@@ -340,6 +343,7 @@
 				4E77CB70256688E800FDAC4B /* DriversStandingsModel.swift in Sources */,
 				4E77CB802566B07900FDAC4B /* ConstructorStandingsData.swift in Sources */,
 				4E7B2CFB25618ED700A08F0D /* RacesViewController.swift in Sources */,
+				4E66CEC125741B4C00ABF908 /* RaceResultViewController.swift in Sources */,
 				4E5AC851256ACA0900A2C86C /* RaceScheduleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

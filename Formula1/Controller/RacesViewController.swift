@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RacesViewController: UIViewController {
+class RacesViewController: UIViewController ,UITableViewDelegate{
     
     @IBOutlet var RacesTableView: UITableView!
     
@@ -15,6 +15,7 @@ class RacesViewController: UIViewController {
     
     override func viewDidLoad() {
         RacesTableView.dataSource = self
+        RacesTableView.delegate = self
         super.viewDidLoad()
         var formulaManager = FormulaManger()
         formulaManager.delegate = self
@@ -42,6 +43,9 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
         cell.racesImage.backgroundColor = UIColor.black
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToRaceResult", sender: self)
     }
     //MARK: -Formula delegate func
     func racesScheduleDataDidLoad(Races: RaceScheduleModel) {
