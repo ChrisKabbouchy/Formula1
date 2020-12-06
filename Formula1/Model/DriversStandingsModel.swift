@@ -21,5 +21,6 @@ struct DriversInfoList {
     var nationality : String
     var dateOfBirth : String
     var constructor : String
+    var permanentNumber : String
     
 }

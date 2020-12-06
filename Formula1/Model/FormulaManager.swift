@@ -24,6 +24,7 @@ struct FormulaManger {
     let driversUrl = "https://ergast.com/api/f1/current/driverStandings.json"
     let constructorsUrl = "https://ergast.com/api/f1/current/constructorStandings.json"
     let racesUrl = "https://ergast.com/api/f1/current.json"
+    let raceResultUrl = "https://ergast.com/api/f1/2020/15/results"
     var delegate : FormulaMangerDelegate?
     
     //MARK: -Drivers data function
@@ -54,7 +55,8 @@ struct FormulaManger {
                                 driverNumber: driverIndex[i].Driver.permanentNumber,
                                 nationality: driverIndex[i].Driver.nationality,
                                 dateOfBirth: driverIndex[i].Driver.dateOfBirth,
-                                constructor: driverIndex[i].Constructors[0].name)
+                                constructor: driverIndex[i].Constructors[0].name,
+                                permanentNumber: driverIndex[i].Driver.permanentNumber)
                             print(driversList)
                             standingsList.append(driversList)
                         }
@@ -167,5 +169,10 @@ struct FormulaManger {
             task.resume()
             
         }
+    }
+    
+    //MARK: -Races Result Data
+    func fetchRaceResult(round : String){
+        <#function body#>
     }
 }

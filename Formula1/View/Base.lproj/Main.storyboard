@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ocg-FZ-Ucv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531.8840579710145" y="428.57142857142856"/>
+            <point key="canvasLocation" x="646" y="723"/>
         </scene>
         <!--Race Result View Controller-->
         <scene sceneID="HWc-Ng-eYn">
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ds-hB-hd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="430"/>
+            <point key="canvasLocation" x="1741" y="723"/>
         </scene>
         <!--Standing-->
         <scene sceneID="vvC-HW-Ds7">
@@ -311,11 +311,28 @@
                         <outlet property="DriverTableView" destination="KaT-Ek-peT" id="2oE-bA-QJp"/>
                         <outlet property="segmentedControl" destination="TC1-Gw-N5y" id="Vh0-aZ-N7c"/>
                         <segue destination="eVf-gH-SES" kind="show" identifier="goToDriverDetails" id="z97-8K-x84"/>
+                        <segue destination="Oid-l4-RTN" kind="show" identifier="goToConstructorDtails" id="8fx-2E-Lzg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieo-Hc-haQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="647.20000000000005" y="-247.82608695652175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YM8-zn-sMz">
+            <objects>
+                <viewController id="Oid-l4-RTN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58d-9X-aQC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="anb-2q-mI6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uuV-Yn-fy8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIg-ge-0oO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="60"/>
         </scene>
         <!--Driver Details View Controller-->
         <scene sceneID="OO0-yU-Gj0">
@@ -342,8 +359,8 @@
                                 <rect key="frame" x="0.0" y="63" width="414" height="412"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexander albon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcW-xz-LDE">
-                                <rect key="frame" x="97" y="488" width="203" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="max" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcW-xz-LDE">
+                                <rect key="frame" x="28" y="488" width="300.5" height="34"/>
                                 <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -358,13 +375,16 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Bull" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkC-2q-3gz">
-                                <rect key="frame" x="90.5" y="554" width="87" height="27"/>
+                                <rect key="frame" x="70" y="554" width="107.5" height="27"/>
                                 <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdG-Fd-qDU">
-                                <rect key="frame" x="368.5" y="488" width="30.5" height="31.5"/>
+                                <rect key="frame" x="368.5" y="488" width="30.5" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Oii-7v-VDE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -378,48 +398,48 @@
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMo-zf-6B8" userLabel="TeamColor">
                                 <rect key="frame" x="15" y="488" width="5" height="34"/>
-                                <color key="backgroundColor" name="Red Bull"/>
+                                <color key="backgroundColor" name="Renault"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="5" id="yJo-lV-4Sf"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk4-Cy-U5V">
-                                <rect key="frame" x="32" y="676" width="78" height="27"/>
+                                <rect key="frame" x="15" y="676" width="95" height="27"/>
                                 <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Of Birth :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD5-iV-avy">
-                                <rect key="frame" x="45" y="735" width="147" height="27"/>
+                                <rect key="frame" x="15" y="735" width="177" height="27"/>
                                 <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thaie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-db-SAz">
-                                <rect key="frame" x="89" y="625" width="50" height="27"/>
+                                <rect key="frame" x="70" y="625" width="69" height="27"/>
                                 <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LbH-dy-2eZ"/>
-                        <color key="backgroundColor" name="Ferrari"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZBD-hz-bfu" secondAttribute="trailing" id="10p-iD-QJR"/>
-                            <constraint firstItem="HkC-2q-3gz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xKa-nf-VET" secondAttribute="trailing" constant="8" symbolic="YES" id="1fZ-Pn-wEL"/>
-                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" secondItem="HkC-2q-3gz" secondAttribute="trailing" constant="236.5" id="5SV-qY-Qnz"/>
+                            <constraint firstItem="HkC-2q-3gz" firstAttribute="leading" secondItem="xKa-nf-VET" secondAttribute="trailing" constant="8" symbolic="YES" id="1fZ-Pn-wEL"/>
+                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="HkC-2q-3gz" secondAttribute="trailing" constant="236.5" id="5SV-qY-Qnz"/>
                             <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" secondItem="ZiL-lw-30m" secondAttribute="trailing" constant="10" id="6pY-la-1sj"/>
-                            <constraint firstItem="aDM-db-SAz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KHX-ZH-Zjb" secondAttribute="trailing" constant="8" symbolic="YES" id="7QJ-NG-9dA"/>
+                            <constraint firstItem="aDM-db-SAz" firstAttribute="leading" secondItem="KHX-ZH-Zjb" secondAttribute="trailing" constant="8" symbolic="YES" id="7QJ-NG-9dA"/>
                             <constraint firstItem="ZiL-lw-30m" firstAttribute="leading" relation="lessThanOrEqual" secondItem="am3-7q-Jgd" secondAttribute="trailing" constant="50" id="9bB-kL-RJC"/>
                             <constraint firstItem="KcW-xz-LDE" firstAttribute="top" secondItem="ZBD-hz-bfu" secondAttribute="bottom" constant="13" id="AwD-4X-oI8"/>
                             <constraint firstItem="ZBD-hz-bfu" firstAttribute="top" secondItem="am3-7q-Jgd" secondAttribute="bottom" constant="13" id="HHH-ac-LnC"/>
                             <constraint firstItem="xKa-nf-VET" firstAttribute="leading" secondItem="LbH-dy-2eZ" secondAttribute="leading" constant="15" id="Hnj-1k-Jux"/>
                             <constraint firstItem="HkC-2q-3gz" firstAttribute="top" secondItem="KcW-xz-LDE" secondAttribute="bottom" constant="32" id="K2q-h3-2ht"/>
-                            <constraint firstItem="iD5-iV-avy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LbH-dy-2eZ" secondAttribute="leading" id="KS5-xG-Va7"/>
+                            <constraint firstItem="iD5-iV-avy" firstAttribute="leading" secondItem="LbH-dy-2eZ" secondAttribute="leading" constant="15" id="KS5-xG-Va7"/>
                             <constraint firstItem="xKa-nf-VET" firstAttribute="top" secondItem="KcW-xz-LDE" secondAttribute="bottom" constant="20" id="Ksu-c1-L04"/>
                             <constraint firstItem="KHX-ZH-Zjb" firstAttribute="leading" secondItem="LbH-dy-2eZ" secondAttribute="leading" constant="15" id="LES-Ry-cs8"/>
                             <constraint firstItem="aDM-db-SAz" firstAttribute="top" secondItem="HkC-2q-3gz" secondAttribute="bottom" constant="44" id="Lrd-nS-p3q"/>
-                            <constraint firstItem="KcW-xz-LDE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xMo-zf-6B8" secondAttribute="trailing" constant="8" symbolic="YES" id="MKw-iG-ZB7"/>
+                            <constraint firstItem="KcW-xz-LDE" firstAttribute="leading" secondItem="xMo-zf-6B8" secondAttribute="trailing" constant="8" symbolic="YES" id="MKw-iG-ZB7"/>
                             <constraint firstItem="am3-7q-Jgd" firstAttribute="leading" secondItem="Kfn-9m-Bjg" secondAttribute="leadingMargin" id="N0K-ws-EbF"/>
                             <constraint firstItem="ZBD-hz-bfu" firstAttribute="top" secondItem="am3-7q-Jgd" secondAttribute="bottom" constant="13" id="Na2-jG-Ng0"/>
                             <constraint firstItem="AdG-Fd-qDU" firstAttribute="top" secondItem="ZBD-hz-bfu" secondAttribute="bottom" constant="13" id="PU7-sd-gLf"/>
@@ -427,17 +447,17 @@
                             <constraint firstItem="jk4-Cy-U5V" firstAttribute="top" secondItem="KHX-ZH-Zjb" secondAttribute="bottom" constant="20" id="Szk-YO-lHc"/>
                             <constraint firstItem="xMo-zf-6B8" firstAttribute="leading" secondItem="LbH-dy-2eZ" secondAttribute="leading" constant="15" id="UZQ-PY-gIM"/>
                             <constraint firstItem="ZBD-hz-bfu" firstAttribute="top" secondItem="ZiL-lw-30m" secondAttribute="bottom" constant="1" id="WDs-it-Gxd"/>
-                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" secondItem="jk4-Cy-U5V" secondAttribute="trailing" constant="304" id="cug-h2-Jkv"/>
-                            <constraint firstItem="AdG-Fd-qDU" firstAttribute="leading" secondItem="KcW-xz-LDE" secondAttribute="trailing" constant="68.5" id="fmc-sO-WIG"/>
+                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="jk4-Cy-U5V" secondAttribute="trailing" constant="304" id="cug-h2-Jkv"/>
+                            <constraint firstItem="AdG-Fd-qDU" firstAttribute="leading" secondItem="KcW-xz-LDE" secondAttribute="trailing" constant="40" id="fmc-sO-WIG"/>
                             <constraint firstItem="ZBD-hz-bfu" firstAttribute="leading" secondItem="Kfn-9m-Bjg" secondAttribute="leading" id="iCW-Ou-Gax"/>
-                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" secondItem="aDM-db-SAz" secondAttribute="trailing" constant="275" id="j3G-Bx-lEx"/>
-                            <constraint firstItem="jk4-Cy-U5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LbH-dy-2eZ" secondAttribute="leading" id="jkM-Jo-GNq"/>
+                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="aDM-db-SAz" secondAttribute="trailing" constant="275" id="j3G-Bx-lEx"/>
+                            <constraint firstItem="jk4-Cy-U5V" firstAttribute="leading" secondItem="LbH-dy-2eZ" secondAttribute="leading" constant="15" id="jkM-Jo-GNq"/>
                             <constraint firstItem="KcW-xz-LDE" firstAttribute="top" secondItem="ZBD-hz-bfu" secondAttribute="bottom" constant="13" id="jtV-N3-TqN"/>
                             <constraint firstItem="ZiL-lw-30m" firstAttribute="top" secondItem="LbH-dy-2eZ" secondAttribute="top" id="kfg-cw-8Vx"/>
                             <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" secondItem="AdG-Fd-qDU" secondAttribute="trailing" constant="15" id="oFh-9G-tc6"/>
                             <constraint firstItem="KHX-ZH-Zjb" firstAttribute="top" secondItem="xKa-nf-VET" secondAttribute="bottom" constant="20" id="qFf-BB-Gsd"/>
                             <constraint firstItem="iD5-iV-avy" firstAttribute="top" secondItem="jk4-Cy-U5V" secondAttribute="bottom" constant="32" id="stQ-Zr-Eum"/>
-                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" secondItem="iD5-iV-avy" secondAttribute="trailing" constant="222" id="uns-2c-1KK"/>
+                            <constraint firstItem="LbH-dy-2eZ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="iD5-iV-avy" secondAttribute="trailing" constant="222" id="uns-2c-1KK"/>
                             <constraint firstItem="xMo-zf-6B8" firstAttribute="top" secondItem="ZBD-hz-bfu" secondAttribute="bottom" constant="13" id="xa1-cW-YsY"/>
                             <constraint firstItem="am3-7q-Jgd" firstAttribute="top" secondItem="LbH-dy-2eZ" secondAttribute="top" constant="13" id="zBU-3R-FDK"/>
                         </constraints>
@@ -449,6 +469,7 @@
                         <outlet property="driverName" destination="KcW-xz-LDE" id="uJK-Zo-DEK"/>
                         <outlet property="nationalityImage" destination="KHX-ZH-Zjb" id="5XS-2f-AnE"/>
                         <outlet property="nationalityName" destination="aDM-db-SAz" id="GJY-zR-fJo"/>
+                        <outlet property="permanentNumber" destination="AdG-Fd-qDU" id="CgV-c7-U4j"/>
                         <outlet property="points" destination="jk4-Cy-U5V" id="hwg-8P-Rh9"/>
                         <outlet property="teamColor" destination="xMo-zf-6B8" id="5si-Lq-PUa"/>
                         <outlet property="teamImage" destination="xKa-nf-VET" id="KEI-rW-JrT"/>
@@ -457,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wp6-uk-UpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492.753623188406" y="-247.09821428571428"/>
+            <point key="canvasLocation" x="1741" y="-762"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="izC-Zy-n7L">
@@ -493,8 +514,8 @@
         <namedColor name="Ferrari">
             <color red="0.86299997568130493" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Red Bull">
-            <color red="0.0" green="0.016000000759959221" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Renault">
+            <color red="0.96100002527236938" green="1" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

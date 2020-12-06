@@ -98,9 +98,11 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
 
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        <#code#>
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let driverVC = segue.destination as! DriverDetailsViewController
+        let index = DriverTableView.indexPathForSelectedRow
+        driverVC.driverDetails = driverModel?.driversInfoList[index!.row]
+    }
     
     //MARK: -Formula delegate func
     
