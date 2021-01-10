@@ -24,6 +24,7 @@ class StandingViewController: UIViewController, UITableViewDelegate {
         formulaManager.delegate = self
         formulaManager.fetchStandingsData()
         formulaManager.fetchConstructorData()
+        formulaManager.fetchRaceResult(round: "15")
         print("hello")
         
         // Do any additional setup after loading the view.

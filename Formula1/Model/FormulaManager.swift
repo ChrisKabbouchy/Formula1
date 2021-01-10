@@ -11,12 +11,14 @@ protocol FormulaMangerDelegate {
     func driversDataDidLoad(Drivers : DriversStandingsModel)
     func constructorDataDidLoad(Constructors: ConstructorStandingsModel)
     func racesScheduleDataDidLoad(Races : RaceScheduleModel)
+    func raceResultDataDidLoad (RaceResult : RaceResultModel)
     func errorOccurred(error:Error)
 }
 extension FormulaMangerDelegate {
     func driversDataDidLoad(Drivers : DriversStandingsModel){}
     func constructorDataDidLoad(Constructors: ConstructorStandingsModel){}
     func racesScheduleDataDidLoad(Races : RaceScheduleModel){}
+    func raceResultDataDidLoad (RaceResult : RaceResultModel){}
     func errorOccurred(error:Error){}
 }
 struct FormulaManger {
@@ -24,7 +26,7 @@ struct FormulaManger {
     let driversUrl = "https://ergast.com/api/f1/current/driverStandings.json"
     let constructorsUrl = "https://ergast.com/api/f1/current/constructorStandings.json"
     let racesUrl = "https://ergast.com/api/f1/current.json"
-    let raceResultUrl = "https://ergast.com/api/f1/2020/15/results"
+    let raceResultUrl = "https://ergast.com/api/f1/2020/15/results.json"
     var delegate : FormulaMangerDelegate?
     
     //MARK: -Drivers data function
@@ -57,7 +59,7 @@ struct FormulaManger {
                                 dateOfBirth: driverIndex[i].Driver.dateOfBirth,
                                 constructor: driverIndex[i].Constructors[0].name,
                                 permanentNumber: driverIndex[i].Driver.permanentNumber)
-                            print(driversList)
+                           // print(driversList)
                             standingsList.append(driversList)
                         }
                         let driverModel = DriversStandingsModel(
@@ -173,6 +175,60 @@ struct FormulaManger {
     
     //MARK: -Races Result Data
     func fetchRaceResult(round : String){
-        <#function body#>
+        
+        if let url = URL(string: raceResultUrl){
+            let session = URLSession(configuration: .default)
+            
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil{
+                    print("error in task")
+                    delegate?.errorOccurred(error: error!)
+                    return
+                }
+                if let safeData = data{
+                    let decoder = JSONDecoder()
+                    do {
+                        let decodedData = try decoder.decode(RaceResultData.self, from: safeData)
+                        let raceResultIndex = decodedData.MRData.RaceTable.Races[0]
+                        var raceResultList : [raceResultInfoList] = []
+                        for i in 0...decodedData.MRData.RaceTable.Races[0].Results.count-1 {
+                            
+                            let resultList = raceResultInfoList(
+                                position: raceResultIndex.Results[i].position,
+                                points: raceResultIndex.Results[i].points,
+                                name: raceResultIndex.Results[i].Driver.givenName,
+                                lastName: raceResultIndex.Results[i].Driver.familyName,
+                                code: raceResultIndex.Results[i].Driver.code,
+                                nationality: raceResultIndex.Results[i].Driver.nationality,
+                                raceName: raceResultIndex.raceName,
+                                circuitName: raceResultIndex.Circuit.circuitName,
+                                location: raceResultIndex.Circuit.Location.locality,
+                                country: raceResultIndex.Circuit.Location.country,
+                                date: raceResultIndex.date,
+                                raceTime: raceResultIndex.time,
+                                grid: raceResultIndex.Results[i].grid,
+                                laps: raceResultIndex.Results[i].laps,
+                                status: raceResultIndex.Results[i].status,
+                                lapTime: raceResultIndex.Results[i].Time?.time ?? "0",
+                                fastestLapTime: raceResultIndex.Results[i].FastestLap?.Time.time ?? "0",
+                                fastestLapRank: raceResultIndex.Results[i].FastestLap?.rank ?? "0")
+                            raceResultList.append(resultList)
+                        }
+                        let raceResultModel = RaceResultModel(
+                            season: decodedData.MRData.RaceTable.season,
+                            round: decodedData.MRData.RaceTable.round,
+                            raceResultInfoList: raceResultList)
+                        
+                        delegate?.raceResultDataDidLoad(RaceResult: raceResultModel)
+                    } catch  {
+                        print(error)
+                    }
+                    
+                }
+            }
+            task.resume()
+            
+        }
+
     }
 }

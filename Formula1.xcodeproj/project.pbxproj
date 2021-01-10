@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E084FBF2565786200587865 /* RacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E084FBE2565786200587865 /* RacesCell.swift */; };
+		4E0F61BA25AB5E6100999893 /* RaceResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F61B925AB5E6000999893 /* RaceResultData.swift */; };
+		4E0F61BF25AB5E7C00999893 /* RaceResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */; };
 		4E5AC851256ACA0900A2C86C /* RaceScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */; };
 		4E5AC856256ACA2D00A2C86C /* RaceScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */; };
 		4E66CEC125741B4C00ABF908 /* RaceResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		4E084FBE2565786200587865 /* RacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesCell.swift; sourceTree = "<group>"; };
+		4E0F61B925AB5E6000999893 /* RaceResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultData.swift; sourceTree = "<group>"; };
+		4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultModel.swift; sourceTree = "<group>"; };
 		4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleData.swift; sourceTree = "<group>"; };
 		4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleModel.swift; sourceTree = "<group>"; };
 		4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				4E77CB842566B59700FDAC4B /* ConstructorStandingsModel.swift */,
 				4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */,
 				4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */,
+				4E0F61B925AB5E6000999893 /* RaceResultData.swift */,
+				4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,8 +339,10 @@
 				4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */,
 				4E7B2CB725617D3900A08F0D /* DriverDetailsViewController.swift in Sources */,
 				4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */,
+				4E0F61BA25AB5E6100999893 /* RaceResultData.swift in Sources */,
 				4E084FBF2565786200587865 /* RacesCell.swift in Sources */,
 				4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */,
+				4E0F61BF25AB5E7C00999893 /* RaceResultModel.swift in Sources */,
 				4E5AC856256ACA2D00A2C86C /* RaceScheduleModel.swift in Sources */,
 				4E77CB752566892100FDAC4B /* DriversStandingsData.swift in Sources */,
 				4E7B2D002561ACCE00A08F0D /* DriverCell.swift in Sources */,
