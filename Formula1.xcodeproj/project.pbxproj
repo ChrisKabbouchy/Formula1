@@ -10,6 +10,7 @@
 		4E084FBF2565786200587865 /* RacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E084FBE2565786200587865 /* RacesCell.swift */; };
 		4E0F61BA25AB5E6100999893 /* RaceResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F61B925AB5E6000999893 /* RaceResultData.swift */; };
 		4E0F61BF25AB5E7C00999893 /* RaceResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */; };
+		4E3B06D725ACC6F500A6F3A1 /* RaceRessultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B06D625ACC6F500A6F3A1 /* RaceRessultCell.swift */; };
 		4E5AC851256ACA0900A2C86C /* RaceScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */; };
 		4E5AC856256ACA2D00A2C86C /* RaceScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */; };
 		4E66CEC125741B4C00ABF908 /* RaceResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */; };
@@ -53,6 +54,7 @@
 		4E084FBE2565786200587865 /* RacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesCell.swift; sourceTree = "<group>"; };
 		4E0F61B925AB5E6000999893 /* RaceResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultData.swift; sourceTree = "<group>"; };
 		4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultModel.swift; sourceTree = "<group>"; };
+		4E3B06D625ACC6F500A6F3A1 /* RaceRessultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRessultCell.swift; sourceTree = "<group>"; };
 		4E5AC850256ACA0900A2C86C /* RaceScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleData.swift; sourceTree = "<group>"; };
 		4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScheduleModel.swift; sourceTree = "<group>"; };
 		4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultViewController.swift; sourceTree = "<group>"; };
@@ -134,11 +136,12 @@
 			isa = PBXGroup;
 			children = (
 				4E7B2CF525618DD800A08F0D /* StandingViewController.swift */,
-				4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */,
 				4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */,
+				4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */,
 				4E66CEC025741B4C00ABF908 /* RaceResultViewController.swift */,
 				4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */,
 				4E084FBE2565786200587865 /* RacesCell.swift */,
+				4E3B06D625ACC6F500A6F3A1 /* RaceRessultCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */,
 				4E7B2CB725617D3900A08F0D /* DriverDetailsViewController.swift in Sources */,
 				4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */,
+				4E3B06D725ACC6F500A6F3A1 /* RaceRessultCell.swift in Sources */,
 				4E0F61BA25AB5E6100999893 /* RaceResultData.swift in Sources */,
 				4E084FBF2565786200587865 /* RacesCell.swift in Sources */,
 				4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */,

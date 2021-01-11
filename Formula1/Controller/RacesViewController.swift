@@ -20,6 +20,7 @@ class RacesViewController: UIViewController ,UITableViewDelegate{
         var formulaManager = FormulaManger()
         formulaManager.delegate = self
         formulaManager.fetchRacesData()
+        formulaManager.fetchRaceResult(round: "15")
         
         // Do any additional setup after loading the view.
     }

@@ -211,7 +211,8 @@ struct FormulaManger {
                                 status: raceResultIndex.Results[i].status,
                                 lapTime: raceResultIndex.Results[i].Time?.time ?? "0",
                                 fastestLapTime: raceResultIndex.Results[i].FastestLap?.Time.time ?? "0",
-                                fastestLapRank: raceResultIndex.Results[i].FastestLap?.rank ?? "0")
+                                fastestLapRank: raceResultIndex.Results[i].FastestLap?.rank ?? "0",
+                                constructorName: raceResultIndex.Results[i].Constructor.name)
                             raceResultList.append(resultList)
                         }
                         let raceResultModel = RaceResultModel(

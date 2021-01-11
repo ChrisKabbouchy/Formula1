@@ -31,4 +31,5 @@ struct raceResultInfoList  {
     var lapTime : String
     var fastestLapTime : String
     var fastestLapRank : String
+    var constructorName : String
 }
