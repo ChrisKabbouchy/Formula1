@@ -100,7 +100,7 @@ struct FormulaManger {
                         for i in 0...decodedData.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.count-1 {
                             
                             let constructorList = ConstructorsInfoList(
-                                position: Int(ConstructorIndex[i].position) ?? 0,
+                                position: ConstructorIndex[i].position,
                                 points: ConstructorIndex[i].points,
                                 wins: ConstructorIndex[i].wins,
                                 constructorName: ConstructorIndex[i].Constructor.name,

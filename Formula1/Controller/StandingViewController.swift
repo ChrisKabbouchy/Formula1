@@ -83,7 +83,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
             cell.driverImage.isHidden = true
             cell.carImage.isHidden = false
             cell.carImage.image = UIImage(named: "\(constructorItem?.constructorName ?? "Mercedes")-car")
-           // cell.layer.borderWidth = 2
+            // cell.layer.borderWidth = 2
             cell.contentView.layer.borderColor = UIColor(named: (constructorItem?.constructorName) ?? "AlphaTauri")?.cgColor
             
         default:
@@ -92,15 +92,32 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToDriverDetails", sender: self)
-        print(indexPath)
-
+        switch segmentChoice {
+        case 0:
+            performSegue(withIdentifier: "goToDriverDetails", sender: self)
+        case 1:
+            performSegue(withIdentifier: "goToConstructorDtails", sender: self)
+        default:
+            break
+        }
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let driverVC = segue.destination as! DriverDetailsViewController
-        let index = DriverTableView.indexPathForSelectedRow
-        driverVC.driverDetails = driverModel?.driversInfoList[index!.row]
+        switch segmentChoice {
+        case 0:
+            let driverVC = segue.destination as! DriverDetailsViewController
+            let index = DriverTableView.indexPathForSelectedRow
+            driverVC.driverDetails = driverModel?.driversInfoList[index!.row]
+        case 1:
+            let constructorVC = segue.destination as! ConstructorDetailsViewController
+            let index = DriverTableView.indexPathForSelectedRow
+            constructorVC.constructorDetail = constructorModel?.constructorsInfoList[index!.row]
+        default:
+            break
+        }
+        
     }
     
     //MARK: -Formula delegate func
@@ -128,7 +145,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         DispatchQueue.main.async {
             self.present(alertController, animated: true, completion: nil)
         }
-            
+        
     }
     
     

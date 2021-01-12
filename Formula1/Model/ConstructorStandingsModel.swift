@@ -13,7 +13,7 @@ struct ConstructorStandingsModel {
     var constructorsInfoList : [ConstructorsInfoList]
 }
 struct ConstructorsInfoList {
-    var position : Int
+    var position : String
     var points : String
     var wins : String
     var constructorName : String
