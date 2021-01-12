@@ -26,7 +26,7 @@ struct FormulaManger {
     let driversUrl = "https://ergast.com/api/f1/current/driverStandings.json"
     let constructorsUrl = "https://ergast.com/api/f1/current/constructorStandings.json"
     let racesUrl = "https://ergast.com/api/f1/current.json"
-    let raceResultUrl = "https://ergast.com/api/f1/2020/15/results.json"
+    let raceResultUrl = "https://ergast.com/api/f1/2020/"
     var delegate : FormulaMangerDelegate?
     
     //MARK: -Drivers data function
@@ -175,8 +175,8 @@ struct FormulaManger {
     
     //MARK: -Races Result Data
     func fetchRaceResult(round : String){
-        
-        if let url = URL(string: raceResultUrl){
+        let finalUrl = "\(raceResultUrl)\(round)/results.json"
+        if let url = URL(string: finalUrl){
             let session = URLSession(configuration: .default)
             
             let task = session.dataTask(with: url) { (data, response, error) in

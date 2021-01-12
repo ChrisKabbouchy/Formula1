@@ -10,6 +10,7 @@ import UIKit
 class RaceResultViewController: UIViewController,UITableViewDelegate {
     
     var raceResultModel : RaceResultModel?
+    var round : String?
     
     @IBOutlet var raceResultTableView: UITableView!
     override func viewDidLoad() {
@@ -18,7 +19,7 @@ class RaceResultViewController: UIViewController,UITableViewDelegate {
         raceResultTableView.dataSource = self
         var formulaManager = FormulaManger()
         formulaManager.delegate = self
-        formulaManager.fetchRaceResult(round: "15")
+        formulaManager.fetchRaceResult(round: round ?? "1")
         // Do any additional setup after loading the view.
     }
 }

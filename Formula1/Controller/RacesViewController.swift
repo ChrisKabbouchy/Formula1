@@ -48,6 +48,12 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToRaceResult", sender: self)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultVC = segue.destination as! RaceResultViewController
+        let index = RacesTableView.indexPathForSelectedRow
+        resultVC.round = racesModel?.racesInfoList[index!.row].round
+        
+    }
     //MARK: -Formula delegate func
     func racesScheduleDataDidLoad(Races: RaceScheduleModel) {
         racesModel = Races

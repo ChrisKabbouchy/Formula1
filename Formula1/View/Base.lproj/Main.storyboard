@@ -447,8 +447,29 @@
                     <view key="view" contentMode="scaleToFill" id="58d-9X-aQC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Standings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkz-B0-DSC">
+                                <rect key="frame" x="20" y="20" width="209.5" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="F1-LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="iGN-zO-b0e">
+                                <rect key="frame" x="301" y="7" width="113" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="m2G-2b-DoW"/>
+                                    <constraint firstAttribute="height" constant="62" id="oan-Kb-bNL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Alfa Romeo-car" translatesAutoresizingMaskIntoConstraints="NO" id="JAj-hL-5Z5">
+                                <rect key="frame" x="0.0" y="98" width="414" height="412"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="anb-2q-mI6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="uuV-Yn-fy8"/>
                 </viewController>
@@ -627,6 +648,7 @@
     <color key="tintColor" name="Ferrari"/>
     <resources>
         <image name="Albon" width="412" height="412"/>
+        <image name="Alfa Romeo-car" width="864" height="256"/>
         <image name="F1-LOGO" width="932" height="524"/>
         <image name="Red Bull" width="412" height="412"/>
         <image name="Thai" width="412" height="275"/>
