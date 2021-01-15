@@ -32,6 +32,8 @@
 		4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CF525618DD800A08F0D /* StandingViewController.swift */; };
 		4E7B2CFB25618ED700A08F0D /* RacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */; };
 		4E7B2D002561ACCE00A08F0D /* DriverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */; };
+		4EB2BAE525B1FC6800BBEF3F /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */; };
+		4EB2BAED25B1FC9C00BBEF3F /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		4E7B2CF525618DD800A08F0D /* StandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewController.swift; sourceTree = "<group>"; };
 		4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewController.swift; sourceTree = "<group>"; };
 		4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCell.swift; sourceTree = "<group>"; };
+		4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				4E5AC855256ACA2D00A2C86C /* RaceScheduleModel.swift */,
 				4E0F61B925AB5E6000999893 /* RaceResultData.swift */,
 				4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */,
+				4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */,
+				4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,10 +348,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB2BAED25B1FC9C00BBEF3F /* NewsModel.swift in Sources */,
 				4E77CB6B2566863700FDAC4B /* FormulaManager.swift in Sources */,
 				4E3B06E225AE1EB500A6F3A1 /* ConstructorDetailsViewController.swift in Sources */,
 				4E7B2CB725617D3900A08F0D /* DriverDetailsViewController.swift in Sources */,
 				4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */,
+				4EB2BAE525B1FC6800BBEF3F /* NewsData.swift in Sources */,
 				4E3B06D725ACC6F500A6F3A1 /* RaceRessultCell.swift in Sources */,
 				4E0F61BA25AB5E6100999893 /* RaceResultData.swift in Sources */,
 				4E084FBF2565786200587865 /* RacesCell.swift in Sources */,

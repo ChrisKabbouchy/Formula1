@@ -6,12 +6,13 @@
 //
 
 import Foundation
-
+ 
 protocol FormulaMangerDelegate {
     func driversDataDidLoad(Drivers : DriversStandingsModel)
     func constructorDataDidLoad(Constructors: ConstructorStandingsModel)
     func racesScheduleDataDidLoad(Races : RaceScheduleModel)
     func raceResultDataDidLoad (RaceResult : RaceResultModel)
+    func newsDataDidLoad (newsModel : [NewsModel])
     func errorOccurred(error:Error)
 }
 extension FormulaMangerDelegate {
@@ -19,6 +20,7 @@ extension FormulaMangerDelegate {
     func constructorDataDidLoad(Constructors: ConstructorStandingsModel){}
     func racesScheduleDataDidLoad(Races : RaceScheduleModel){}
     func raceResultDataDidLoad (RaceResult : RaceResultModel){}
+    func newsDataDidLoad (newsModel : [NewsModel]){}
     func errorOccurred(error:Error){}
 }
 struct FormulaManger {
@@ -27,6 +29,7 @@ struct FormulaManger {
     let constructorsUrl = "https://ergast.com/api/f1/current/constructorStandings.json"
     let racesUrl = "https://ergast.com/api/f1/current.json"
     let raceResultUrl = "https://ergast.com/api/f1/2020/"
+    private let searchUrl = "https://newsapi.org/v2/everything?q=formula%201&apiKey=fcf0aefb55a24e739bbb8ea0b5edbad1"
     var delegate : FormulaMangerDelegate?
     
     //MARK: -Drivers data function
@@ -59,7 +62,7 @@ struct FormulaManger {
                                 dateOfBirth: driverIndex[i].Driver.dateOfBirth,
                                 constructor: driverIndex[i].Constructors[0].name,
                                 permanentNumber: driverIndex[i].Driver.permanentNumber)
-                           // print(driversList)
+                            // print(driversList)
                             standingsList.append(driversList)
                         }
                         let driverModel = DriversStandingsModel(
@@ -230,6 +233,51 @@ struct FormulaManger {
             task.resume()
             
         }
+        
+    }
+    //MARK: -News Data
+    func fetchNews(){
 
+        if let url = URL(string: searchUrl){
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let session = URLSession(configuration: .default)
+        
+        let task =  session.dataTask(with: request) { (data, response, error) in
+            if error != nil{
+                return
+            }
+            if let safeData = data{
+                let decoder = JSONDecoder()
+                do {
+                    let decodedData = try decoder.decode(NewsData.self, from: safeData)
+                    var newsModel = [NewsModel]()
+                    for i in 0..<decodedData.articles!.count{
+                        let currentItem = decodedData.articles![i]
+                        let newNewsItem  = NewsModel(
+                            id: i,
+                            sourceName: currentItem.source.name,
+                            title: currentItem.title,
+                            description: currentItem.description,
+                            imageUrl: currentItem.urlToImage,
+                            newsUrl: currentItem.url,
+                            date: currentItem.publishedAt,
+                            author: currentItem.author,
+                            content: currentItem.content)
+                        newsModel.append(newNewsItem)
+                    }
+                    delegate?.newsDataDidLoad(newsModel: newsModel)
+                } catch  {
+                    print(error)
+                }
+            }
+        }
+        task.resume()
+        
+        }else{
+            print(searchUrl)
+        }
     }
 }
