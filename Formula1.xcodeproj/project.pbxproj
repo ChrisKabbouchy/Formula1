@@ -34,6 +34,7 @@
 		4E7B2D002561ACCE00A08F0D /* DriverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */; };
 		4EB2BAE525B1FC6800BBEF3F /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */; };
 		4EB2BAED25B1FC9C00BBEF3F /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */; };
+		4EB5CD7025B4AAB900D7461D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5CD6F25B4AAB900D7461D /* NewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		4E7B2CFF2561ACCE00A08F0D /* DriverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCell.swift; sourceTree = "<group>"; };
 		4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 		4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		4EB5CD6F25B4AAB900D7461D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				4E7B2CF525618DD800A08F0D /* StandingViewController.swift */,
+				4EB5CD6F25B4AAB900D7461D /* NewsViewController.swift */,
 				4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */,
 				4E3B06E125AE1EB500A6F3A1 /* ConstructorDetailsViewController.swift */,
 				4E7B2CFA25618ED700A08F0D /* RacesViewController.swift */,
@@ -363,6 +366,7 @@
 				4E77CB752566892100FDAC4B /* DriversStandingsData.swift in Sources */,
 				4E7B2D002561ACCE00A08F0D /* DriverCell.swift in Sources */,
 				4E7B2CB525617D3900A08F0D /* SceneDelegate.swift in Sources */,
+				4EB5CD7025B4AAB900D7461D /* NewsViewController.swift in Sources */,
 				4E77CB852566B59700FDAC4B /* ConstructorStandingsModel.swift in Sources */,
 				4E77CB70256688E800FDAC4B /* DriversStandingsModel.swift in Sources */,
 				4E77CB802566B07900FDAC4B /* ConstructorStandingsData.swift in Sources */,
