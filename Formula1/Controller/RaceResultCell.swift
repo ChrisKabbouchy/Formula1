@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RaceRessultCell: UITableViewCell {
+class RaceResultCell: UITableViewCell {
 
     @IBOutlet var positionLabel: UILabel!
     @IBOutlet var driverCode: UILabel!

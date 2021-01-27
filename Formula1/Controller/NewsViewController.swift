@@ -7,10 +7,19 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController ,UITableViewDelegate{
 
+    @IBOutlet var newsTableView: UITableView!
+    
+    var newsModel : [NewsModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        newsTableView.delegate = self
+        newsTableView.dataSource = self
+        var formulaManager = FormulaManger()
+        formulaManager.delegate = self
+        formulaManager.fetchNews()
 
         // Do any additional setup after loading the view.
     }
@@ -26,4 +35,30 @@ class NewsViewController: UIViewController {
     }
     */
 
+}
+
+//MARK: -Table view
+
+extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return newsModel?.count ?? 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = newsTableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
+        cell.newsImage.image = UIImage(systemName: "photo.fill")
+        cell.newsLabel.text = newsModel?[indexPath.row].title
+        return cell
+    }
+    func newsDataDidLoad (newsModel : [NewsModel]){
+        self.newsModel = newsModel
+        DispatchQueue.main.async {
+            self.newsTableView.reloadData()
+        }
+    }
+    func errorOccurred(error:Error){
+        
+    }
+    
 }

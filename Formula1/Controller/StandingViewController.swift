@@ -24,7 +24,6 @@ class StandingViewController: UIViewController, UITableViewDelegate {
         formulaManager.delegate = self
         formulaManager.fetchStandingsData()
         formulaManager.fetchConstructorData()
-        formulaManager.fetchNews()
         
         // Do any additional setup after loading the view.
     }

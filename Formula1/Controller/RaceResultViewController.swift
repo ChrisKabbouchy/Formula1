@@ -32,7 +32,7 @@ extension RaceResultViewController : UITableViewDataSource,FormulaMangerDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RaceResultCell", for: indexPath) as! RaceRessultCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RaceResultCell", for: indexPath) as! RaceResultCell
         let driverIndex = raceResultModel?.raceResultInfoList[indexPath.row]
         cell.positionLabel.text = driverIndex?.position
         cell.teamColor.backgroundColor = UIColor(named:(driverIndex?.constructorName) ?? "AlphaTauri")
