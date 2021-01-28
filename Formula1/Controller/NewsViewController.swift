@@ -12,6 +12,7 @@ class NewsViewController: UIViewController ,UITableViewDelegate{
     @IBOutlet var newsTableView: UITableView!
     
     var newsModel : [NewsModel]?
+    var image = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +40,17 @@ class NewsViewController: UIViewController ,UITableViewDelegate{
 
 //MARK: -Table view
 
-extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate {
+extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate ,ImageLoaderDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsModel?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let imageLoader = ImageLoader(imageString: newsModel?[indexPath.row].imageUrl)
+        imageLoader.delegate = self
         let cell = newsTableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
-        cell.newsImage.image = UIImage(systemName: "photo.fill")
+        cell.newsImage.image = imageLoader.image
         cell.newsLabel.text = newsModel?[indexPath.row].title
         return cell
     }
@@ -59,6 +62,12 @@ extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate {
     }
     func errorOccurred(error:Error){
         
+    }
+    func imageDidLoad(image: UIImage) {
+        self.image = image
+        DispatchQueue.main.async {
+            self.newsTableView.reloadData()
+        }
     }
     
 }

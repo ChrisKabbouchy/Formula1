@@ -35,6 +35,7 @@
 		4EB2BAE525B1FC6800BBEF3F /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */; };
 		4EB2BAED25B1FC9C00BBEF3F /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */; };
 		4EB5CD7025B4AAB900D7461D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5CD6F25B4AAB900D7461D /* NewsViewController.swift */; };
+		4EE2CC9D25C327DC00E4E9F0 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2CC9C25C327DC00E4E9F0 /* ImageLoader.swift */; };
 		4EFE86C325C1C6A600CA14B8 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE86C225C1C6A600CA14B8 /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 		4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		4EB5CD6F25B4AAB900D7461D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		4EE2CC9C25C327DC00E4E9F0 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4EFE86C225C1C6A600CA14B8 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */,
 				4EB2BAE425B1FC6800BBEF3F /* NewsData.swift */,
 				4EB2BAEC25B1FC9C00BBEF3F /* NewsModel.swift */,
+				4EE2CC9C25C327DC00E4E9F0 /* ImageLoader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				4E0F61BF25AB5E7C00999893 /* RaceResultModel.swift in Sources */,
 				4E5AC856256ACA2D00A2C86C /* RaceScheduleModel.swift in Sources */,
 				4E77CB752566892100FDAC4B /* DriversStandingsData.swift in Sources */,
+				4EE2CC9D25C327DC00E4E9F0 /* ImageLoader.swift in Sources */,
 				4E7B2D002561ACCE00A08F0D /* DriverCell.swift in Sources */,
 				4E7B2CB525617D3900A08F0D /* SceneDelegate.swift in Sources */,
 				4EB5CD7025B4AAB900D7461D /* NewsViewController.swift in Sources */,
