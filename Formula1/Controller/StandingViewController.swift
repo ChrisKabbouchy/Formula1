@@ -71,7 +71,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
             cell.carImage.isHidden = true
             cell.driverImage.isHidden = false
             cell.driverImage.image = UIImage(named: driverItem?.driverLastName ?? "Hamilton")
-            cell.contentView.layer.borderColor = UIColor(named:(driverItem?.constructor) ?? "AlphaTauri")?.cgColor
+            //cell.contentView.layer.borderColor = UIColor(named:(driverItem?.constructor) ?? "AlphaTauri")?.cgColor
             
         case 1 :// user selected constructor standings
             let constructorItem = constructorModel?.constructorsInfoList[indexPath.row]
@@ -84,7 +84,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
             cell.carImage.isHidden = false
             cell.carImage.image = UIImage(named: "\(constructorItem?.constructorName ?? "Mercedes")-car")
             // cell.layer.borderWidth = 2
-            cell.contentView.layer.borderColor = UIColor(named: (constructorItem?.constructorName) ?? "AlphaTauri")?.cgColor
+            //cell.contentView.layer.borderColor = UIColor(named: (constructorItem?.constructorName) ?? "AlphaTauri")?.cgColor
             
         default:
             break

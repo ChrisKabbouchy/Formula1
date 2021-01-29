@@ -38,7 +38,6 @@ class ImageLoader {
                     self.image = UIImage(data: data) ?? UIImage(systemName: "photo.fill")!
                     self.delegate?.imageDidLoad(image: self.image)
                     self.imageCache.set(forKey: urlString!, image: self.image)
-                    print("load")
                 }
             }
             task.resume()
