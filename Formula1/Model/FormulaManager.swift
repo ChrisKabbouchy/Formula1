@@ -25,9 +25,9 @@ extension FormulaMangerDelegate {
 }
 struct FormulaManger {
     
-    let driversUrl = "https://ergast.com/api/f1/current/driverStandings.json"
-    let constructorsUrl = "https://ergast.com/api/f1/current/constructorStandings.json"
-    let racesUrl = "https://ergast.com/api/f1/current.json"
+    let driversUrl = "https://ergast.com/api/f1/2020/driverStandings.json"
+    let constructorsUrl = "https://ergast.com/api/f1/2020/constructorStandings.json"
+    let racesUrl = "https://ergast.com/api/f1/2020.json"
     let raceResultUrl = "https://ergast.com/api/f1/2020/"
     private let searchUrl = "https://newsapi.org/v2/everything?q=formula%201&apiKey=fcf0aefb55a24e739bbb8ea0b5edbad1"
     var delegate : FormulaMangerDelegate?
@@ -154,7 +154,7 @@ struct FormulaManger {
                                 country: racesIndex[i].Circuit.Location.country,
                                 locality: racesIndex[i].Circuit.Location.locality,
                                 date: racesIndex[i].date,
-                                time: racesIndex[i].time,
+                                time: racesIndex[i].time ?? "0",
                                 lat: racesIndex[i].Circuit.Location.lat,
                                 long: racesIndex[i].Circuit.Location.long)
                             

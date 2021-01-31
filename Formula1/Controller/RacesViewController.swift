@@ -36,11 +36,12 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "RacesCell", for: indexPath) as! RacesCell
         let raceItem = racesModel?.racesInfoList[indexPath.row]
-        cell.countryLabel.text = raceItem?.country
-        cell.dateLabel.text = raceItem?.date
         cell.raceName.text = raceItem?.raceName
+        cell.dateLabel.text = raceItem?.date
+        cell.country.text = raceItem?.country
+        cell.countyImage.image = UIImage(named: raceItem?.country ?? "Country TBC") ?? UIImage(named: "Country TBC")
         cell.roundLabel.text = "Round: \(raceItem?.round ?? "")"
-        cell.racesImage.image = UIImage(named: raceItem?.circuitName ?? "Yas Marina Circuit")
+        cell.racesImage.image = UIImage(named: raceItem?.circuitName ?? "Yas Marina Circuit") ?? UIImage(named: "TBC")
         cell.racesImage.backgroundColor = UIColor.black
         
         return cell

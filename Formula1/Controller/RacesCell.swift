@@ -9,11 +9,12 @@ import UIKit
 
 class RacesCell: UITableViewCell {
     
-    @IBOutlet var countryLabel: UILabel!
-    @IBOutlet var racesImage: UIImageView!
     @IBOutlet var raceName: UILabel!
+    @IBOutlet var racesImage: UIImageView!
+    @IBOutlet var country: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var roundLabel: UILabel!
+    @IBOutlet var countyImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

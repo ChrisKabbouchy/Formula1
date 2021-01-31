@@ -23,7 +23,7 @@ struct Races :Decodable {
     var raceName : String
     var Circuit : Circuit
     var date : String
-    var time : String
+    var time : String?
     
 }
 struct Circuit :  Decodable {
