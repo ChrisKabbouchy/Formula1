@@ -39,10 +39,11 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
         cell.raceName.text = raceItem?.raceName
         cell.dateLabel.text = raceItem?.date
         cell.country.text = raceItem?.country
+        cell.circuitName.text = raceItem?.circuitName
         cell.countyImage.image = UIImage(named: raceItem?.country ?? "Country TBC") ?? UIImage(named: "Country TBC")
         cell.roundLabel.text = "Round: \(raceItem?.round ?? "")"
         cell.racesImage.image = UIImage(named: raceItem?.circuitName ?? "Yas Marina Circuit") ?? UIImage(named: "TBC")
-        cell.racesImage.backgroundColor = UIColor.black
+        //cell.racesImage.backgroundColor = UIColor.black
         
         return cell
     }

@@ -15,6 +15,7 @@ class RacesCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var roundLabel: UILabel!
     @IBOutlet var countyImage: UIImageView!
+    @IBOutlet var circuitName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
