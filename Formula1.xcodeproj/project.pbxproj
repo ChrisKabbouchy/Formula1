@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E084FBF2565786200587865 /* RacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E084FBE2565786200587865 /* RacesCell.swift */; };
+		4E0A7A9225CB084D00217C34 /* NewsHighlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7A9125CB084D00217C34 /* NewsHighlightViewController.swift */; };
 		4E0F61BA25AB5E6100999893 /* RaceResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F61B925AB5E6000999893 /* RaceResultData.swift */; };
 		4E0F61BF25AB5E7C00999893 /* RaceResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */; };
 		4E3B06D725ACC6F500A6F3A1 /* RaceResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B06D625ACC6F500A6F3A1 /* RaceResultCell.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		4E084FBE2565786200587865 /* RacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesCell.swift; sourceTree = "<group>"; };
+		4E0A7A9125CB084D00217C34 /* NewsHighlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHighlightViewController.swift; sourceTree = "<group>"; };
 		4E0F61B925AB5E6000999893 /* RaceResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultData.swift; sourceTree = "<group>"; };
 		4E0F61BE25AB5E7B00999893 /* RaceResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultModel.swift; sourceTree = "<group>"; };
 		4E3B06D625ACC6F500A6F3A1 /* RaceResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				4EB5CD6F25B4AAB900D7461D /* NewsViewController.swift */,
+				4E0A7A9125CB084D00217C34 /* NewsHighlightViewController.swift */,
 				4E7B2CF525618DD800A08F0D /* StandingViewController.swift */,
 				4E7B2CB625617D3900A08F0D /* DriverDetailsViewController.swift */,
 				4E3B06E125AE1EB500A6F3A1 /* ConstructorDetailsViewController.swift */,
@@ -365,6 +368,7 @@
 				4E7B2CF625618DD800A08F0D /* StandingViewController.swift in Sources */,
 				4EB2BAE525B1FC6800BBEF3F /* NewsData.swift in Sources */,
 				4E3B06D725ACC6F500A6F3A1 /* RaceResultCell.swift in Sources */,
+				4E0A7A9225CB084D00217C34 /* NewsHighlightViewController.swift in Sources */,
 				4E0F61BA25AB5E6100999893 /* RaceResultData.swift in Sources */,
 				4E084FBF2565786200587865 /* RacesCell.swift in Sources */,
 				4E7B2CB325617D3900A08F0D /* AppDelegate.swift in Sources */,

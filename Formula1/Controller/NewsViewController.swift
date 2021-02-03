@@ -25,17 +25,6 @@ class NewsViewController: UIViewController ,UITableViewDelegate{
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 //MARK: -Table view
@@ -53,6 +42,14 @@ extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate ,Im
         cell.newsImage.image = imageLoader.image
         cell.newsLabel.text = newsModel?[indexPath.row].title
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToHighlightNews", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let newsVC = segue.destination as! NewsHighlightViewController
+        let index = newsTableView.indexPathForSelectedRow
+        newsVC.newsModel = newsModel?[index!.row]
     }
     func newsDataDidLoad (newsModel : [NewsModel]){
         self.newsModel = newsModel
