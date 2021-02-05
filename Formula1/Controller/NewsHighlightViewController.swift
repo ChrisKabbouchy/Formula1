@@ -9,15 +9,22 @@ import UIKit
 
 class NewsHighlightViewController: UIViewController {
     
-
+    var newsModel : NewsModel?
+    
     @IBOutlet var newsImage: UIImageView!
     @IBOutlet var sourceLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var dateTimeLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var newsButton: UIButton!
     @IBOutlet var descriptionLabel: UILabel!
     
-    var newsModel : NewsModel?
+    @IBAction func newsButtonPressed(_ sender: UIButton) {
+        if let url = URL(string: newsModel?.newsUrl ?? "") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +35,7 @@ class NewsHighlightViewController: UIViewController {
         titleLabel.text = newsModel?.title
         descriptionLabel.text = newsModel?.description
         newsImage.image = imageLoader.image
+        newsButton.layer.cornerRadius = 10
     }
     
 
