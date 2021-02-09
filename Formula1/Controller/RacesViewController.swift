@@ -47,13 +47,23 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
         
         return cell
     }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "goToRaceResult", sender: self)
+//    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let resultVC = segue.destination as! RaceResultViewController
+//        let index = RacesTableView.indexPathForSelectedRow
+//        resultVC.round = racesModel?.racesInfoList[index!.row].round
+//
+//    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToRaceResult", sender: self)
+        performSegue(withIdentifier: "goToCircuit", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let resultVC = segue.destination as! RaceResultViewController
+        let circuitVC = segue.destination as! CircuitViewController
         let index = RacesTableView.indexPathForSelectedRow
-        resultVC.round = racesModel?.racesInfoList[index!.row].round
+        circuitVC.racesModel = racesModel?.racesInfoList[index!.row]
+        circuitVC.index = index
         
     }
     //MARK: -Formula delegate func
