@@ -56,6 +56,7 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
 //        resultVC.round = racesModel?.racesInfoList[index!.row].round
 //
 //    }
+    //MARK: - Segue to circuit
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToCircuit", sender: self)
     }

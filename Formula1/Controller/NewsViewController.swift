@@ -40,6 +40,7 @@ extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate ,Im
         imageLoader.delegate = self
         let cell = newsTableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
         cell.newsImage.image = imageLoader.image
+        cell.newsImage.layer.cornerRadius = 10
         cell.newsLabel.text = newsModel?[indexPath.row].title
         return cell
     }

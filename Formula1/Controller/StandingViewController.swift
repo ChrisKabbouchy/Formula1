@@ -48,9 +48,9 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch segmentChoice {
         case 0:
-            return driverModel?.driversInfoList.count ?? 1
+            return driverModel?.driversInfoList.count ?? 0
         case 1:
-            return constructorModel?.constructorsInfoList.count ?? 1
+            return constructorModel?.constructorsInfoList.count ?? 0
         default:
             return 0
         }

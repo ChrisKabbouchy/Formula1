@@ -43,6 +43,7 @@ class CircuitViewController: UIViewController {
         locality.text = "City: \(racesModel?.locality ?? "")"
         circuitName.text = racesModel?.circuitName
         circuitImage.image = UIImage(named: racesModel?.circuitName ?? "Yas Marina Circuit") ?? UIImage(named: "TBC")
+        raceResultButton.layer.cornerRadius = 10
         
         // Do any additional setup after loading the view.
     }

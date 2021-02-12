@@ -6,7 +6,7 @@
 //
 
 import Foundation
- 
+
 protocol FormulaMangerDelegate {
     func driversDataDidLoad(Drivers : DriversStandingsModel)
     func constructorDataDidLoad(Constructors: ConstructorStandingsModel)
@@ -14,6 +14,7 @@ protocol FormulaMangerDelegate {
     func raceResultDataDidLoad (RaceResult : RaceResultModel)
     func newsDataDidLoad (newsModel : [NewsModel])
     func errorOccurred(error:Error)
+    func noDataAvailable()
 }
 extension FormulaMangerDelegate {
     func driversDataDidLoad(Drivers : DriversStandingsModel){}
@@ -22,6 +23,7 @@ extension FormulaMangerDelegate {
     func raceResultDataDidLoad (RaceResult : RaceResultModel){}
     func newsDataDidLoad (newsModel : [NewsModel]){}
     func errorOccurred(error:Error){}
+    func noDataAvailable(){}
 }
 struct FormulaManger {
     
@@ -192,38 +194,42 @@ struct FormulaManger {
                     let decoder = JSONDecoder()
                     do {
                         let decodedData = try decoder.decode(RaceResultData.self, from: safeData)
-                        let raceResultIndex = decodedData.MRData.RaceTable.Races[0]
-                        var raceResultList : [raceResultInfoList] = []
-                        for i in 0...decodedData.MRData.RaceTable.Races[0].Results.count-1 {
+                        if let raceResultIndex = decodedData.MRData.RaceTable.Races.first {
+                            var raceResultList : [raceResultInfoList] = []
+                            for i in 0...decodedData.MRData.RaceTable.Races[0].Results.count-1 {
+                                
+                                let resultList = raceResultInfoList(
+                                    position: raceResultIndex.Results[i].position,
+                                    points: raceResultIndex.Results[i].points,
+                                    name: raceResultIndex.Results[i].Driver.givenName,
+                                    lastName: raceResultIndex.Results[i].Driver.familyName,
+                                    code: raceResultIndex.Results[i].Driver.code,
+                                    nationality: raceResultIndex.Results[i].Driver.nationality,
+                                    raceName: raceResultIndex.raceName,
+                                    circuitName: raceResultIndex.Circuit.circuitName,
+                                    location: raceResultIndex.Circuit.Location.locality,
+                                    country: raceResultIndex.Circuit.Location.country,
+                                    date: raceResultIndex.date,
+                                    raceTime: raceResultIndex.time,
+                                    grid: raceResultIndex.Results[i].grid,
+                                    laps: raceResultIndex.Results[i].laps,
+                                    status: raceResultIndex.Results[i].status,
+                                    lapTime: raceResultIndex.Results[i].Time?.time ?? "0",
+                                    fastestLapTime: raceResultIndex.Results[i].FastestLap?.Time.time ?? "0",
+                                    fastestLapRank: raceResultIndex.Results[i].FastestLap?.rank ?? "0",
+                                    constructorName: raceResultIndex.Results[i].Constructor.name)
+                                raceResultList.append(resultList)
+                            }
+                            let raceResultModel = RaceResultModel(
+                                season: decodedData.MRData.RaceTable.season,
+                                round: decodedData.MRData.RaceTable.round,
+                                raceResultInfoList: raceResultList)
                             
-                            let resultList = raceResultInfoList(
-                                position: raceResultIndex.Results[i].position,
-                                points: raceResultIndex.Results[i].points,
-                                name: raceResultIndex.Results[i].Driver.givenName,
-                                lastName: raceResultIndex.Results[i].Driver.familyName,
-                                code: raceResultIndex.Results[i].Driver.code,
-                                nationality: raceResultIndex.Results[i].Driver.nationality,
-                                raceName: raceResultIndex.raceName,
-                                circuitName: raceResultIndex.Circuit.circuitName,
-                                location: raceResultIndex.Circuit.Location.locality,
-                                country: raceResultIndex.Circuit.Location.country,
-                                date: raceResultIndex.date,
-                                raceTime: raceResultIndex.time,
-                                grid: raceResultIndex.Results[i].grid,
-                                laps: raceResultIndex.Results[i].laps,
-                                status: raceResultIndex.Results[i].status,
-                                lapTime: raceResultIndex.Results[i].Time?.time ?? "0",
-                                fastestLapTime: raceResultIndex.Results[i].FastestLap?.Time.time ?? "0",
-                                fastestLapRank: raceResultIndex.Results[i].FastestLap?.rank ?? "0",
-                                constructorName: raceResultIndex.Results[i].Constructor.name)
-                            raceResultList.append(resultList)
+                            delegate?.raceResultDataDidLoad(RaceResult: raceResultModel)
+                        }else{
+                            delegate?.noDataAvailable()
                         }
-                        let raceResultModel = RaceResultModel(
-                            season: decodedData.MRData.RaceTable.season,
-                            round: decodedData.MRData.RaceTable.round,
-                            raceResultInfoList: raceResultList)
                         
-                        delegate?.raceResultDataDidLoad(RaceResult: raceResultModel)
                     } catch  {
                         print(error)
                     }
@@ -237,45 +243,45 @@ struct FormulaManger {
     }
     //MARK: -News Data
     func fetchNews(){
-
+        
         if let url = URL(string: searchUrl){
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        let session = URLSession(configuration: .default)
-        
-        let task =  session.dataTask(with: request) { (data, response, error) in
-            if error != nil{
-                return
-            }
-            if let safeData = data{
-                let decoder = JSONDecoder()
-                do {
-                    let decodedData = try decoder.decode(NewsData.self, from: safeData)
-                    var newsModel = [NewsModel]()
-                    for i in 0..<decodedData.articles!.count{
-                        let currentItem = decodedData.articles![i]
-                        let newNewsItem  = NewsModel(
-                            id: i,
-                            sourceName: currentItem.source.name,
-                            title: currentItem.title,
-                            description: currentItem.description,
-                            imageUrl: currentItem.urlToImage,
-                            newsUrl: currentItem.url,
-                            date: currentItem.publishedAt,
-                            author: currentItem.author,
-                            content: currentItem.content)
-                        newsModel.append(newNewsItem)
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            
+            let session = URLSession(configuration: .default)
+            
+            let task =  session.dataTask(with: request) { (data, response, error) in
+                if error != nil{
+                    return
+                }
+                if let safeData = data{
+                    let decoder = JSONDecoder()
+                    do {
+                        let decodedData = try decoder.decode(NewsData.self, from: safeData)
+                        var newsModel = [NewsModel]()
+                        for i in 0..<decodedData.articles!.count{
+                            let currentItem = decodedData.articles![i]
+                            let newNewsItem  = NewsModel(
+                                id: i,
+                                sourceName: currentItem.source.name,
+                                title: currentItem.title,
+                                description: currentItem.description,
+                                imageUrl: currentItem.urlToImage,
+                                newsUrl: currentItem.url,
+                                date: currentItem.publishedAt,
+                                author: currentItem.author,
+                                content: currentItem.content)
+                            newsModel.append(newNewsItem)
+                        }
+                        delegate?.newsDataDidLoad(newsModel: newsModel)
+                    } catch  {
+                        print(error)
                     }
-                    delegate?.newsDataDidLoad(newsModel: newsModel)
-                } catch  {
-                    print(error)
                 }
             }
-        }
-        task.resume()
-        
+            task.resume()
+            
         }else{
             print(searchUrl)
         }

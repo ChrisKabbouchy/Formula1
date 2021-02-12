@@ -28,7 +28,7 @@ class RaceResultViewController: UIViewController,UITableViewDelegate {
 extension RaceResultViewController : UITableViewDataSource,FormulaMangerDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return raceResultModel?.raceResultInfoList.count ?? 1
+        return raceResultModel?.raceResultInfoList.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,6 +61,29 @@ extension RaceResultViewController : UITableViewDataSource,FormulaMangerDelegate
             self.present(alertController, animated: true, completion: nil)
         }
             
+    }
+    //MARK: -No Race Data
+    func noDataAvailable() {
+        checkData()
+    }
+    
+    func checkData() {
+        if raceResultModel?.raceResultInfoList.first == nil {
+            let alertController = UIAlertController(
+                title: "Too early!",
+                message:"The race did not occurred yet! ",
+                preferredStyle: .alert)
+
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default){_ in
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true)
+                }
+            })
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+        }
     }
     
 }
