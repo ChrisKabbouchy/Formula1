@@ -44,6 +44,9 @@ extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate ,Im
         cell.newsLabel.text = newsModel?[indexPath.row].title
         return cell
     }
+    
+    //MARK: -Segue to News Highlights
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToHighlightNews", sender: self)
     }
@@ -52,6 +55,9 @@ extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate ,Im
         let index = newsTableView.indexPathForSelectedRow
         newsVC.newsModel = newsModel?[index!.row]
     }
+    
+    //MARK: -Formula Manager delegate
+    
     func newsDataDidLoad (newsModel : [NewsModel]){
         self.newsModel = newsModel
         DispatchQueue.main.async {
@@ -59,8 +65,19 @@ extension NewsViewController :  UITableViewDataSource ,FormulaMangerDelegate ,Im
         }
     }
     func errorOccurred(error:Error){
+        let alertController = UIAlertController(
+            title: "Error Occured",
+            message:error.localizedDescription,
+            preferredStyle: .alert)
         
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
+    
+    //MARK: -Image Loader Delegate
+    
     func imageDidLoad(image: UIImage) {
         self.image = image
         DispatchQueue.main.async {

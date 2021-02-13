@@ -43,19 +43,10 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
         cell.countyImage.image = UIImage(named: raceItem?.country ?? "Country TBC") ?? UIImage(named: "Country TBC")
         cell.roundLabel.text = "Round: \(raceItem?.round ?? "")"
         cell.racesImage.image = UIImage(named: raceItem?.circuitName ?? "Yas Marina Circuit") ?? UIImage(named: "TBC")
-        //cell.racesImage.backgroundColor = UIColor.black
         
         return cell
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "goToRaceResult", sender: self)
-//    }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let resultVC = segue.destination as! RaceResultViewController
-//        let index = RacesTableView.indexPathForSelectedRow
-//        resultVC.round = racesModel?.racesInfoList[index!.row].round
-//
-//    }
+
     //MARK: - Segue to circuit
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToCircuit", sender: self)
@@ -67,7 +58,7 @@ extension RacesViewController : UITableViewDataSource,FormulaMangerDelegate{
         circuitVC.index = index
         
     }
-    //MARK: -Formula delegate func
+    //MARK: -Formula Manager Delegate
     func racesScheduleDataDidLoad(Races: RaceScheduleModel) {
         racesModel = Races
         DispatchQueue.main.async {

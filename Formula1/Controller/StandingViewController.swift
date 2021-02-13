@@ -91,6 +91,9 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         }
         return cell
     }
+    
+    //MARK: -Segue to Driver or Constructor Details
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch segmentChoice {
         case 0:
@@ -100,10 +103,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         default:
             break
         }
-        
-        
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segmentChoice {
         case 0:
@@ -120,7 +120,7 @@ extension StandingViewController : UITableViewDataSource ,FormulaMangerDelegate{
         
     }
     
-    //MARK: -Formula delegate func
+    //MARK: -Formula Manager delegate
     
     func driversDataDidLoad(Drivers: DriversStandingsModel) {
         driverModel = Drivers
