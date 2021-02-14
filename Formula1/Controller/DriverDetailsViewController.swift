@@ -20,6 +20,11 @@ class DriverDetailsViewController: UIViewController {
     @IBOutlet var DOB: UILabel!
     @IBOutlet var permanentNumber: UILabel!
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: true)
+        }
+    }
     var driverDetails : DriversInfoList?
     
     override func viewDidLoad() {

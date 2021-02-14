@@ -19,6 +19,11 @@ class ConstructorDetailsViewController: UIViewController {
     @IBOutlet var positionLabel: UILabel!
     @IBOutlet var winsLabel: UILabel!
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: true)
+        }
+    }
     var constructorDetail : ConstructorsInfoList?
     
     override func viewDidLoad() {

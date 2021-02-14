@@ -13,6 +13,12 @@ class RaceResultViewController: UIViewController,UITableViewDelegate {
     var round : String?
     
     @IBOutlet var raceResultTableView: UITableView!
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: true)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         raceResultTableView.delegate = self

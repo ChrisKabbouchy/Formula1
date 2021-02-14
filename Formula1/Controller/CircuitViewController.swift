@@ -27,6 +27,11 @@ class CircuitViewController: UIViewController {
     @IBOutlet var circuitName: UILabel!
     @IBOutlet var circuitImage: UIImageView!
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: true)
+        }
+    }
     @IBAction func raceResultPressed(_ sender: Any) {
         performSegue(withIdentifier: "goToRaceResult", sender: self)
     }
