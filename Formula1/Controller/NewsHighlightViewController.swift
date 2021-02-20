@@ -19,6 +19,11 @@ class NewsHighlightViewController: UIViewController {
     @IBOutlet var newsButton: UIButton!
     @IBOutlet var descriptionLabel: UILabel!
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: true)
+        }
+    }
     @IBAction func newsButtonPressed(_ sender: UIButton) {
         if let url = URL(string: newsModel?.newsUrl ?? "") {
             UIApplication.shared.open(url)
