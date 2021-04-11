@@ -27,10 +27,10 @@ extension FormulaMangerDelegate {
 }
 struct FormulaManger {
     
-    let driversUrl = "https://ergast.com/api/f1/2020/driverStandings.json"
-    let constructorsUrl = "https://ergast.com/api/f1/2020/constructorStandings.json"
-    let racesUrl = "https://ergast.com/api/f1/2020.json"
-    let raceResultUrl = "https://ergast.com/api/f1/2020/"
+    let driversUrl = "https://ergast.com/api/f1/2021/driverStandings.json"
+    let constructorsUrl = "https://ergast.com/api/f1/2021/constructorStandings.json"
+    let racesUrl = "https://ergast.com/api/f1/2021.json"
+    let raceResultUrl = "https://ergast.com/api/f1/2021/"
     private let searchUrl = "https://newsapi.org/v2/everything?q=formula%201&apiKey=fcf0aefb55a24e739bbb8ea0b5edbad1"
     var delegate : FormulaMangerDelegate?
     
